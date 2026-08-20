@@ -57,19 +57,20 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .brand strong {
   max-width: 10rem;
   font-size: 0.92rem;
+  font-weight: 600;
   line-height: 1.15;
 }
 
 .nav-link {
   color: #314d55;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .nav-link:hover {
@@ -130,7 +131,7 @@ textarea {
   padding: 0.65rem 0.75rem;
   color: var(--brand-dark);
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .mobile-menu-panel a:hover {
@@ -146,7 +147,7 @@ textarea {
   justify-content: center;
   border-radius: 999px;
   padding: 0.7rem 1rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .hero-section {
@@ -275,7 +276,7 @@ textarea {
   padding: 0.55rem 0.9rem;
   color: var(--brand);
   font-size: 0.86rem;
-  font-weight: 700;
+  font-weight: 600;
   box-shadow: 0 8px 20px rgb(19 47 58 / 8%);
 }
 
@@ -371,7 +372,7 @@ textarea {
 .section h2 {
   font-size: clamp(1.45rem, 2.5vw, 2rem);
   line-height: 1.16;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .section-heading p,
@@ -385,7 +386,7 @@ textarea {
   margin-bottom: 0.7rem;
   color: var(--brand) !important;
   font-size: 0.72rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -413,14 +414,14 @@ textarea {
   margin: 0 0 0.75rem;
   color: var(--brand-dark);
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .card a {
   display: inline-block;
   margin-top: 1rem;
   color: var(--brand);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .accent-bar {
@@ -448,13 +449,13 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .trust-item p {
   margin: 0;
   color: var(--brand-dark);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -467,7 +468,7 @@ textarea {
   color: var(--brand-dark);
   font-size: clamp(1.45rem, 2.5vw, 2rem);
   line-height: 1.18;
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .quote-panel {
@@ -532,7 +533,7 @@ textarea {
   margin-bottom: 1rem;
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   line-height: 1.15;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .page-hero p:not(.eyebrow) {
@@ -574,7 +575,7 @@ textarea {
 .story-card span {
   color: var(--brand);
   font-size: 0.82rem;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -588,7 +589,7 @@ textarea {
   display: grid;
   gap: 0.45rem;
   color: var(--brand-dark);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .form-card input,
@@ -612,7 +613,7 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .detail-list {
@@ -644,7 +645,7 @@ textarea {
   background: white;
   padding: 0.75rem 1rem;
   color: var(--brand-dark);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .gallery-grid {
@@ -681,7 +682,7 @@ textarea {
   display: block;
   margin-top: 1.25rem;
   color: var(--brand);
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .gallery-tile h2 {
