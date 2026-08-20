@@ -132,8 +132,8 @@ export default function RootLayout({
           <div className="footer-bottom">
             <p>
               © 2026 All Rights Reserved. Developed by{" "}
-              <a href="/" aria-label="Nirmaan Organization">
-                Nirmaan Organization
+              <a href="/" aria-label="SurVijay Foundation">
+                SurVijay Foundation
               </a>
             </p>
             <div>
