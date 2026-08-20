@@ -489,9 +489,9 @@ textarea {
     linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
     url("/images/banner-community.png");
   background-color: #eef6f2;
-  background-position: center, right center;
+  background-position: center, center;
   background-repeat: no-repeat;
-  background-size: auto, auto 100%;
+  background-size: auto, cover;
   min-height: 17rem;
   padding: 3.75rem 1.25rem;
 }
@@ -820,8 +820,8 @@ textarea {
   }
 
   .page-hero {
-    background-position: center, 68% center;
-    background-size: auto, auto 100%;
+    background-position: center, center;
+    background-size: auto, cover;
     min-height: 15rem;
   }
 
