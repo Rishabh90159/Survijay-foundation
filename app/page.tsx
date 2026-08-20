@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const programs = [
   {
     title: "Learning Support",
@@ -49,12 +47,12 @@ export default function Home() {
               wellbeing, and opportunity.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link className="btn-primary" href="/volunteer">
+              <a className="btn-primary" href="/volunteer">
                 Become a volunteer
-              </Link>
-              <Link className="btn-secondary" href="/programs">
+              </a>
+              <a className="btn-secondary" href="/programs">
                 Explore our work
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -88,7 +86,7 @@ export default function Home() {
               <div className="accent-bar" />
               <h3>{program.title}</h3>
               <p>{program.text}</p>
-              <Link href={program.href}>Learn more</Link>
+              <a href={program.href}>Learn more</a>
             </article>
           ))}
         </div>
@@ -136,9 +134,9 @@ export default function Home() {
             ["Transparency", "/transparency"],
             ["Contact", "/contact"],
           ].map(([label, href]) => (
-            <Link href={href} key={href}>
+            <a href={href} key={href}>
               {label}
-            </Link>
+            </a>
           ))}
         </div>
       </section>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 const programs = [
   ["Learning Support", "/programs/education", "Bridge classes, reading clubs, mentoring, and school-readiness support for children."],
@@ -33,7 +32,7 @@ export default function ProgramsPage() {
             <div className="accent-bar" />
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link href={href}>View program</Link>
+            <a href={href}>View program</a>
           </article>
         ))}
       </section>

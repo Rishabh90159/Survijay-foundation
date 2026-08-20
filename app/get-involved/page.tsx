@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Get Involved",
@@ -29,7 +28,7 @@ export default function GetInvolvedPage() {
             <div className="accent-bar" />
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link href={href}>Continue</Link>
+            <a href={href}>Continue</a>
           </article>
         ))}
       </section>
