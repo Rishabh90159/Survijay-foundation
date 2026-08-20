@@ -240,7 +240,8 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-image,
-  .hero-dots span {
+  .hero-dots span,
+  .floating-contact {
     animation: none;
   }
 
@@ -703,6 +704,7 @@ textarea {
   z-index: 60;
   display: grid;
   gap: 0.75rem;
+  animation: floatingContactDrift 4.8s ease-in-out infinite;
 }
 
 .floating-contact-button {
@@ -742,6 +744,17 @@ textarea {
   border: 2px solid var(--accent);
   background: #5d1723;
   color: var(--accent);
+}
+
+@keyframes floatingContactDrift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.45rem);
+  }
 }
 
 .footer-title {
