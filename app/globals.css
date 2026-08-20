@@ -83,6 +83,14 @@ textarea {
   gap: 0.8rem;
 }
 
+header .brand span,
+header .brand strong,
+header .nav-link,
+header .donate-link,
+header .mobile-menu-panel a {
+  font-weight: 600;
+}
+
 .mobile-menu {
   display: none;
   position: relative;
