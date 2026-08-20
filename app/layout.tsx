@@ -66,6 +66,13 @@ export default function RootLayout({
               Donate
             </Link>
           </nav>
+          <div className="mobile-nav" aria-label="Main pages">
+            {navItems.map(([label, href]) => (
+              <Link href={href} key={href}>
+                {label}
+              </Link>
+            ))}
+          </div>
         </header>
         {children}
         <footer className="bg-[#102730] px-5 py-12 text-white sm:px-8">
