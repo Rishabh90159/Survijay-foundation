@@ -61,17 +61,27 @@ export default function RootLayout({
                 </a>
               ))}
             </div>
-            <a className="donate-link" href="/donate">
-              Donate
-            </a>
-          </nav>
-          <div className="mobile-nav" aria-label="Main pages">
-            {navItems.map(([label, href]) => (
-              <a href={href} key={href}>
-                {label}
+            <div className="nav-actions">
+              <a className="donate-link desktop-donate" href="/donate">
+                Donate
               </a>
-            ))}
-          </div>
+              <details className="mobile-menu">
+                <summary aria-label="Open menu">
+                  <span />
+                  <span />
+                  <span />
+                </summary>
+                <div className="mobile-menu-panel" aria-label="Mobile pages">
+                  {navItems.map(([label, href]) => (
+                    <a href={href} key={href}>
+                      {label}
+                    </a>
+                  ))}
+                  <a href="/donate">Donate</a>
+                </div>
+              </details>
+            </div>
+          </nav>
         </header>
         {children}
         <footer className="bg-[#102730] px-5 py-12 text-white sm:px-8">
