@@ -157,6 +157,12 @@ textarea {
   background: #f6f1e8;
 }
 
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+}
+
 .hero-image {
   position: absolute;
   inset: 0;
@@ -165,13 +171,86 @@ textarea {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
+  animation: heroCarousel 24s infinite;
+  animation-delay: calc(var(--slide-index) * 6s);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: -10;
+  z-index: -5;
   background: linear-gradient(90deg, white 0%, rgb(255 255 255 / 88%) 46%, rgb(255 255 255 / 18%) 100%);
+}
+
+.hero-dots {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  transform: translateX(-50%);
+  gap: 0.45rem;
+}
+
+.hero-dots span {
+  display: block;
+  height: 0.45rem;
+  width: 0.45rem;
+  border-radius: 999px;
+  background: rgb(20 108 99 / 32%);
+  animation: heroDot 24s infinite;
+  animation-delay: calc(var(--dot-index) * 6s);
+}
+
+@keyframes heroCarousel {
+  0%,
+  20% {
+    opacity: 1;
+  }
+
+  25%,
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heroDot {
+  0%,
+  20% {
+    background: var(--brand);
+    transform: scale(1.15);
+  }
+
+  25%,
+  95% {
+    background: rgb(20 108 99 / 32%);
+    transform: scale(1);
+  }
+
+  100% {
+    background: var(--brand);
+    transform: scale(1.15);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-dots span {
+    animation: none;
+  }
+
+  .hero-image:first-child {
+    opacity: 1;
+  }
+
+  .hero-dots span:first-child {
+    background: var(--brand);
+  }
 }
 
 .hero-inner {

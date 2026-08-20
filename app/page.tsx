@@ -1,3 +1,5 @@
+import type { CSSProperties } from "react";
+
 const programs = [
   {
     title: "Learning Support",
@@ -23,15 +25,40 @@ const stats = [
   ["120+", "active volunteers"],
 ];
 
+const carouselImages = [
+  {
+    src: "/images/community-hero.png",
+    alt: "Volunteers teaching children in a community courtyard",
+  },
+  {
+    src: "/images/carousel-education.png",
+    alt: "Volunteer helping children read in a community learning room",
+  },
+  {
+    src: "/images/carousel-health.png",
+    alt: "Community health awareness session with families",
+  },
+  {
+    src: "/images/carousel-empowerment.png",
+    alt: "Women and youth participating in an empowerment workshop",
+  },
+];
+
 export default function Home() {
   return (
     <main>
       <section className="hero-section">
-        <img
-          src="/images/community-hero.png"
-          alt="Volunteers teaching children in a community courtyard"
-          className="hero-image"
-        />
+        <div className="hero-carousel" aria-label="SurVijay Foundation community work images">
+          {carouselImages.map((image, index) => (
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="hero-image"
+              style={{ "--slide-index": index } as CSSProperties}
+              key={image.src}
+            />
+          ))}
+        </div>
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="hero-copy">
@@ -55,6 +82,14 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
+        <div className="hero-dots" aria-hidden="true">
+          {carouselImages.map((image, index) => (
+            <span
+              style={{ "--dot-index": index } as CSSProperties}
+              key={image.src}
+            />
+          ))}
         </div>
       </section>
 
