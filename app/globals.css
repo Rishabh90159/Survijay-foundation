@@ -57,7 +57,7 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .brand strong {
@@ -286,7 +286,7 @@ textarea {
   color: var(--brand-dark);
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   line-height: 1.18;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0;
 }
 
@@ -386,7 +386,7 @@ textarea {
   margin-bottom: 0.7rem;
   color: var(--brand) !important;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -449,7 +449,7 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .trust-item p {
@@ -533,7 +533,7 @@ textarea {
   margin-bottom: 1rem;
   font-size: clamp(1.9rem, 3.5vw, 3rem);
   line-height: 1.15;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .page-hero p:not(.eyebrow) {
@@ -575,7 +575,7 @@ textarea {
 .story-card span {
   color: var(--brand);
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -682,7 +682,7 @@ textarea {
   display: block;
   margin-top: 1.25rem;
   color: var(--brand);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .gallery-tile h2 {
