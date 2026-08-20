@@ -109,9 +109,9 @@ export default function RootLayout({
             </svg>
           </a>
         </div>
-        <footer className="bg-[#102730] px-5 py-12 text-white sm:px-8">
-          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.7fr_0.7fr_0.8fr]">
-            <div>
+        <footer className="site-footer bg-[#102730] px-5 py-12 text-white sm:px-8">
+          <div className="footer-main mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.7fr_0.7fr_0.8fr]">
+            <div className="footer-about">
               <a className="brand text-white" href="/">
                 <span>SV</span>
                 <strong>SurVijay Foundation</strong>
@@ -121,7 +121,7 @@ export default function RootLayout({
                 accessible, SEO-ready Next.js application.
               </p>
             </div>
-            <div>
+            <div className="footer-group">
               <h2 className="footer-title">Quick links</h2>
               <div className="footer-links">
                 {navItems.slice(0, 5).map(([label, href]) => (
@@ -131,7 +131,7 @@ export default function RootLayout({
                 ))}
               </div>
             </div>
-            <div>
+            <div className="footer-group">
               <h2 className="footer-title">Support</h2>
               <div className="footer-links">
                 {navItems.slice(5).map(([label, href]) => (
@@ -142,7 +142,7 @@ export default function RootLayout({
                 <a href="/donate">Donate</a>
               </div>
             </div>
-            <div>
+            <div className="footer-group footer-contact">
               <h2 className="footer-title">Contact</h2>
               <p className="text-sm leading-7 text-white/72">
                 hello@survijay.org
