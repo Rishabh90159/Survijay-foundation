@@ -26,27 +26,27 @@ const stats = [
 export default function Home() {
   return (
     <main>
-      <section className="relative isolate min-h-[calc(100vh-76px)] overflow-hidden bg-[#f6f1e8]">
+      <section className="hero-section">
         <img
           src="/images/community-hero.png"
           alt="Volunteers teaching children in a community courtyard"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+          className="hero-image"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-white via-white/86 to-white/10" />
-        <div className="mx-auto flex min-h-[calc(100vh-76px)] max-w-7xl items-center px-5 py-20 sm:px-8">
-          <div className="max-w-2xl">
-            <p className="mb-4 inline-flex rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-[#146c63] shadow-sm">
+        <div className="hero-overlay" />
+        <div className="hero-inner">
+          <div className="hero-copy">
+            <p className="hero-pill">
               Education, health, and dignity for every community
             </p>
-            <h1 className="text-5xl font-bold leading-[1.03] text-[#132f3a] sm:text-6xl lg:text-7xl">
+            <h1 className="hero-title">
               Helping people build safer, stronger futures.
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#34515b]">
+            <p className="hero-text">
               SurVijay Foundation partners with families, volunteers, and local
               leaders to create practical programs that improve learning,
               wellbeing, and opportunity.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="hero-actions">
               <a className="btn-primary" href="/volunteer">
                 Become a volunteer
               </a>
@@ -58,13 +58,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#132f3a] px-5 py-8 text-white sm:px-8">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 md:grid-cols-4">
+      <section className="stats-band">
+        <div className="stats-grid">
           {stats.map(([value, label]) => (
-            <div key={label} className="border-l border-white/20 pl-4">
-              <strong className="block text-3xl font-bold text-[#f2b84b]">
-                {value}
-              </strong>
+            <div key={label}>
+              <strong>{value}</strong>
               <span className="text-sm text-white/78">{label}</span>
             </div>
           ))}
@@ -92,11 +90,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#eaf4f1] px-5 py-20 sm:px-8">
+      <section className="soft-band">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="eyebrow">Why trust us</p>
-            <h2 className="text-4xl font-bold text-[#132f3a]">
+            <h2>
               Clear work, local leadership, transparent reporting.
             </h2>
           </div>

@@ -28,6 +28,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
 }
 
 a {
@@ -49,8 +51,8 @@ textarea {
 
 .brand span {
   display: grid;
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.25rem;
+  width: 2.25rem;
   place-items: center;
   border-radius: 999px;
   background: var(--brand);
@@ -59,14 +61,14 @@ textarea {
 }
 
 .brand strong {
-  max-width: 11rem;
-  font-size: 0.98rem;
+  max-width: 10rem;
+  font-size: 0.92rem;
   line-height: 1.15;
 }
 
 .nav-link {
   color: #314d55;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -79,7 +81,7 @@ textarea {
   gap: 0.65rem;
   overflow-x: auto;
   border-top: 1px solid rgb(19 47 58 / 8%);
-  padding: 0.7rem 1.25rem;
+  padding: 0.6rem 1rem;
   scrollbar-width: thin;
 }
 
@@ -88,9 +90,9 @@ textarea {
   border: 1px solid rgb(19 47 58 / 14%);
   border-radius: 999px;
   background: white;
-  padding: 0.55rem 0.85rem;
+  padding: 0.45rem 0.72rem;
   color: var(--brand-dark);
-  font-size: 0.88rem;
+  font-size: 0.82rem;
   font-weight: 800;
 }
 
@@ -104,12 +106,112 @@ textarea {
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 2.5rem;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.8rem 1.2rem;
+  padding: 0.7rem 1rem;
   font-weight: 800;
+}
+
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 620px;
+  overflow: hidden;
+  background: #f6f1e8;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  background: linear-gradient(90deg, white 0%, rgb(255 255 255 / 88%) 46%, rgb(255 255 255 / 18%) 100%);
+}
+
+.hero-inner {
+  display: flex;
+  min-height: 620px;
+  max-width: 80rem;
+  margin: 0 auto;
+  align-items: center;
+  padding: 4rem 1.25rem;
+}
+
+.hero-copy {
+  max-width: 40rem;
+}
+
+.hero-pill {
+  display: inline-flex;
+  margin: 0 0 1rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 92%);
+  padding: 0.55rem 0.9rem;
+  color: var(--brand);
+  font-size: 0.86rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgb(19 47 58 / 8%);
+}
+
+.hero-title {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--brand-dark);
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero-text {
+  max-width: 35rem;
+  margin: 1.2rem 0 0;
+  color: #34515b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.stats-band {
+  background: var(--brand-dark);
+  padding: 1.6rem 1.25rem;
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stats-grid div {
+  border-left: 1px solid rgb(255 255 255 / 20%);
+  padding-left: 1rem;
+}
+
+.stats-grid strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1.75rem;
+  line-height: 1.05;
 }
 
 .donate-link,
@@ -128,7 +230,7 @@ textarea {
 .section {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 5rem 1.25rem;
+  padding: 3.75rem 1.25rem;
 }
 
 @media (min-width: 640px) {
@@ -140,7 +242,7 @@ textarea {
 
 .section-heading {
   max-width: 44rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-heading h2,
@@ -152,8 +254,8 @@ textarea {
 
 .section-heading h2,
 .section h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.08;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.16;
   font-weight: 800;
 }
 
@@ -161,13 +263,13 @@ textarea {
 .section p,
 .page-hero p {
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 .eyebrow {
   margin-bottom: 0.7rem;
   color: var(--brand) !important;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -187,7 +289,7 @@ textarea {
 
 .card,
 .story-card {
-  padding: 1.5rem;
+  padding: 1.25rem;
 }
 
 .card h2,
@@ -195,7 +297,7 @@ textarea {
 .story-card h2 {
   margin: 0 0 0.75rem;
   color: var(--brand-dark);
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 800;
 }
 
@@ -220,7 +322,7 @@ textarea {
   border: 1px solid rgb(20 108 99 / 14%);
   border-radius: 8px;
   background: white;
-  padding: 1.1rem;
+  padding: 0.95rem;
 }
 
 .trust-item span {
@@ -241,15 +343,27 @@ textarea {
   line-height: 1.5;
 }
 
+.soft-band {
+  background: #eaf4f1;
+  padding: 3.75rem 1.25rem;
+}
+
+.soft-band h2 {
+  color: var(--brand-dark);
+  font-size: clamp(1.65rem, 3vw, 2.25rem);
+  line-height: 1.18;
+  font-weight: 800;
+}
+
 .quote-panel {
-  padding: 2rem;
+  padding: 1.6rem;
   background: var(--brand-dark);
 }
 
 .quote-panel p {
   color: white;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  line-height: 1.25;
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+  line-height: 1.35;
 }
 
 .quote-panel span {
@@ -262,7 +376,7 @@ textarea {
     url("/images/community-hero.png");
   background-position: center;
   background-size: cover;
-  padding: 5.5rem 1.25rem;
+  padding: 3.75rem 1.25rem;
 }
 
 .page-hero > * {
@@ -274,17 +388,17 @@ textarea {
 .page-hero h1 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: clamp(2.4rem, 6vw, 5rem);
-  line-height: 1.02;
-  font-weight: 900;
+  font-size: clamp(2rem, 4.6vw, 3.5rem);
+  line-height: 1.12;
+  font-weight: 800;
 }
 
 .page-hero p:not(.eyebrow) {
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 .wide-panel {
-  padding: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.25rem, 3vw, 2.25rem);
   background: #fffaf0;
 }
 
@@ -311,7 +425,7 @@ textarea {
   display: block;
   margin-bottom: 0.6rem;
   color: var(--brand);
-  font-size: 2.6rem;
+  font-size: 2rem;
   line-height: 1;
 }
 
@@ -406,7 +520,7 @@ textarea {
 }
 
 .gallery-image {
-  min-height: 13rem;
+  min-height: 11rem;
   background:
     linear-gradient(135deg, rgb(20 108 99 / 18%), rgb(242 184 75 / 28%)),
     url("/images/community-hero.png");
@@ -463,5 +577,59 @@ textarea {
   .donate-link {
     min-height: 2.5rem;
     padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  header nav {
+    height: 64px !important;
+    padding-inline: 1rem !important;
+  }
+
+  .hero-section,
+  .hero-inner {
+    min-height: auto;
+  }
+
+  .hero-inner {
+    align-items: flex-start;
+    padding: 3rem 1rem 3.5rem;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgb(255 255 255 / 94%) 0%, rgb(255 255 255 / 84%) 58%, rgb(255 255 255 / 28%) 100%);
+  }
+
+  .hero-title {
+    max-width: 22rem;
+    font-size: 2.25rem;
+  }
+
+  .hero-text {
+    font-size: 0.96rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section,
+  .soft-band,
+  .page-hero {
+    padding-top: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-grid strong {
+    font-size: 1.5rem;
   }
 }
