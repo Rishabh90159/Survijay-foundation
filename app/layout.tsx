@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const navItems = [
+  ["Home", "/"],
   ["About", "/about"],
   ["Programs", "/programs"],
   ["Impact", "/impact"],
