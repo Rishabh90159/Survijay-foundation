@@ -15,7 +15,7 @@ const navItems = [
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://survijay-foundation.rgiiitdwd.chatgpt.site"),
+  metadataBase: new URL("http://localhost:3000"),
   title: {
     default: "SurVijay Foundation | NGO for Education, Health and Community Support",
     template: "%s | SurVijay Foundation",
