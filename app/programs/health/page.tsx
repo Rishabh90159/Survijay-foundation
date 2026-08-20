@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function HealthProgramPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-health">
         <p className="eyebrow">Program</p>
         <h1>Community health awareness and support.</h1>
         <p>

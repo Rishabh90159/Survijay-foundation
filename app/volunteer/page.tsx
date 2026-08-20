@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function VolunteerPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-empowerment">
         <p className="eyebrow">Volunteer</p>
         <h1>Give your time where it can be felt directly.</h1>
         <p>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function StoriesPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-education">
         <p className="eyebrow">Stories</p>
         <h1>Human stories make the mission memorable.</h1>
         <p>

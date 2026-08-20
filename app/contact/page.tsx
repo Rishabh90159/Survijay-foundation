@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Contact</p>
         <h1>Start a conversation with the team.</h1>
         <p>

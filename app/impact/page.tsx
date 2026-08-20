@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ImpactPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Impact</p>
         <h1>Impact should be specific, visible, and easy to verify.</h1>
         <p>

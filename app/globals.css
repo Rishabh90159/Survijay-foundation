@@ -486,11 +486,35 @@ textarea {
 
 .page-hero {
   background:
-    linear-gradient(120deg, rgb(234 244 241 / 94%), rgb(255 250 239 / 96%)),
+    linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
     url("/images/community-hero.png");
   background-position: center;
   background-size: cover;
   padding: 3.75rem 1.25rem;
+}
+
+.page-hero-community {
+  background-image:
+    linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
+    url("/images/community-hero.png");
+}
+
+.page-hero-education {
+  background-image:
+    linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
+    url("/images/carousel-education.png");
+}
+
+.page-hero-health {
+  background-image:
+    linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
+    url("/images/carousel-health.png");
+}
+
+.page-hero-empowerment {
+  background-image:
+    linear-gradient(120deg, rgb(234 244 241 / 92%), rgb(255 250 239 / 86%), rgb(255 255 255 / 58%)),
+    url("/images/carousel-empowerment.png");
 }
 
 .page-hero > * {

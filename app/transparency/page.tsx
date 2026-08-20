@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function TransparencyPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Transparency</p>
         <h1>Trust grows when documents and updates are easy to find.</h1>
         <p>

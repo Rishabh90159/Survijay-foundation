@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Our work</p>
         <h1>Programs that turn support into visible outcomes.</h1>
         <p>

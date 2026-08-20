@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Gallery</p>
         <h1>Photos and field moments help people trust the work.</h1>
         <p>

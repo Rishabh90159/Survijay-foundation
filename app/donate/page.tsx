@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function DonatePage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-community">
         <p className="eyebrow">Donate</p>
         <h1>Support the work without online payment integration.</h1>
         <p>

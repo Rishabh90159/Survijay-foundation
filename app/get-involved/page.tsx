@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function GetInvolvedPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-empowerment">
         <p className="eyebrow">Get involved</p>
         <h1>Choose the way you want to support the community.</h1>
         <p>

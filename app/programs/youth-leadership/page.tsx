@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function YouthLeadershipProgramPage() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero page-hero-empowerment">
         <p className="eyebrow">Program</p>
         <h1>Youth leadership for confident local changemakers.</h1>
         <p>
