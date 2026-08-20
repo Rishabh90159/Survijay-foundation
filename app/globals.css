@@ -343,6 +343,78 @@ textarea {
   margin: 0;
 }
 
+.route-band {
+  display: grid;
+  gap: 1.5rem;
+  border-top: 1px solid rgb(19 47 58 / 10%);
+  border-bottom: 1px solid rgb(19 47 58 / 10%);
+}
+
+.route-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.route-list a {
+  border: 1px solid rgb(20 108 99 / 18%);
+  border-radius: 999px;
+  background: white;
+  padding: 0.75rem 1rem;
+  color: var(--brand-dark);
+  font-weight: 800;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gallery-tile {
+  overflow: hidden;
+  border: 1px solid rgb(19 47 58 / 10%);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 18px 44px rgb(19 47 58 / 8%);
+}
+
+.gallery-image {
+  min-height: 13rem;
+  background:
+    linear-gradient(135deg, rgb(20 108 99 / 18%), rgb(242 184 75 / 28%)),
+    url("/images/community-hero.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery-tile span,
+.gallery-tile h2,
+.gallery-tile p {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.gallery-tile span {
+  display: block;
+  margin-top: 1.25rem;
+  color: var(--brand);
+  font-weight: 900;
+}
+
+.gallery-tile h2 {
+  margin-top: 0.35rem;
+  margin-bottom: 0.4rem;
+  color: var(--brand-dark);
+  font-size: 1.25rem;
+}
+
+.gallery-tile p {
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .footer-title {
   margin: 0 0 1rem;
   font-size: 1rem;

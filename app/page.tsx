@@ -3,14 +3,17 @@ import Link from "next/link";
 const programs = [
   {
     title: "Learning Support",
+    href: "/programs/education",
     text: "After-school classes, mentoring, and school-readiness support for children who need extra attention.",
   },
   {
     title: "Community Health",
+    href: "/programs/health",
     text: "Health awareness camps, hygiene sessions, and referral support for families in underserved communities.",
   },
   {
     title: "Women Empowerment",
+    href: "/programs/women-empowerment",
     text: "Skill-building circles, financial literacy sessions, and confidence programs for women and adolescent girls.",
   },
 ];
@@ -85,7 +88,7 @@ export default function Home() {
               <div className="accent-bar" />
               <h3>{program.title}</h3>
               <p>{program.text}</p>
-              <Link href="/programs">Learn more</Link>
+              <Link href={program.href}>Learn more</Link>
             </article>
           ))}
         </div>
@@ -100,7 +103,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {[
+            {[  
               "Program updates shared regularly",
               "Offline donation details, no payment gateway for now",
               "Volunteer-friendly activities and onboarding",
@@ -112,6 +115,31 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section route-band">
+        <div>
+          <p className="eyebrow">Complete site map</p>
+          <h2>Every key NGO page is ready to grow with real content.</h2>
+        </div>
+        <div className="route-list">
+          {[
+            ["About", "/about"],
+            ["Programs", "/programs"],
+            ["Impact", "/impact"],
+            ["Stories", "/stories"],
+            ["Gallery", "/gallery"],
+            ["Get Involved", "/get-involved"],
+            ["Volunteer", "/volunteer"],
+            ["Donate", "/donate"],
+            ["Transparency", "/transparency"],
+            ["Contact", "/contact"],
+          ].map(([label, href]) => (
+            <Link href={href} key={href}>
+              {label}
+            </Link>
+          ))}
         </div>
       </section>
 

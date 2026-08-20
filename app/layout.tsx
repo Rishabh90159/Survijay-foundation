@@ -7,12 +7,15 @@ const navItems = [
   ["Programs", "/programs"],
   ["Impact", "/impact"],
   ["Stories", "/stories"],
+  ["Gallery", "/gallery"],
+  ["Get Involved", "/get-involved"],
   ["Volunteer", "/volunteer"],
+  ["Transparency", "/transparency"],
   ["Contact", "/contact"],
 ];
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://survijay-foundation.example"),
+  metadataBase: new URL("https://survijay-foundation.rgiiitdwd.chatgpt.site"),
   title: {
     default: "SurVijay Foundation | NGO for Education, Health and Community Support",
     template: "%s | SurVijay Foundation",
@@ -52,7 +55,7 @@ export default function RootLayout({
               <span>SV</span>
               <strong>SurVijay Foundation</strong>
             </Link>
-            <div className="hidden items-center gap-6 lg:flex">
+            <div className="hidden items-center gap-4 lg:flex">
               {navItems.map(([label, href]) => (
                 <Link className="nav-link" href={href} key={href}>
                   {label}
@@ -66,7 +69,7 @@ export default function RootLayout({
         </header>
         {children}
         <footer className="bg-[#102730] px-5 py-12 text-white sm:px-8">
-          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.7fr_0.7fr_0.8fr]">
             <div>
               <Link className="brand text-white" href="/">
                 <span>SV</span>
@@ -80,11 +83,22 @@ export default function RootLayout({
             <div>
               <h2 className="footer-title">Quick links</h2>
               <div className="footer-links">
-                {navItems.slice(0, 4).map(([label, href]) => (
+                {navItems.slice(0, 5).map(([label, href]) => (
                   <Link href={href} key={href}>
                     {label}
                   </Link>
                 ))}
+              </div>
+            </div>
+            <div>
+              <h2 className="footer-title">Support</h2>
+              <div className="footer-links">
+                {navItems.slice(5).map(([label, href]) => (
+                  <Link href={href} key={href}>
+                    {label}
+                  </Link>
+                ))}
+                <Link href="/donate">Donate</Link>
               </div>
             </div>
             <div>

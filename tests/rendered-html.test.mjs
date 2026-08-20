@@ -46,9 +46,18 @@ test("renders important static routes", async () => {
     ["/programs", "Programs that turn support into visible outcomes"],
     ["/impact", "Impact should be specific"],
     ["/stories", "Human stories make the mission memorable"],
+    ["/gallery", "Photos and field moments"],
+    ["/get-involved", "Choose the way you want to support"],
     ["/volunteer", "Give your time where it can be felt directly"],
     ["/donate", "without online payment integration"],
+    ["/transparency", "Trust grows when documents"],
     ["/contact", "Start a conversation with the team"],
+    ["/programs/education", "Education and learning support"],
+    ["/programs/health", "Community health awareness"],
+    ["/programs/women-empowerment", "Women empowerment through skills"],
+    ["/programs/relief", "Relief and essentials"],
+    ["/programs/youth-leadership", "Youth leadership for confident"],
+    ["/programs/environment", "Environment drives"],
   ];
 
   for (const [path, text] of expected) {
