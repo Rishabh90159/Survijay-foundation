@@ -63,7 +63,7 @@ textarea {
 .brand strong {
   max-width: 10rem;
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.15;
 }
 
@@ -147,7 +147,7 @@ textarea {
   justify-content: center;
   border-radius: 999px;
   padding: 0.7rem 1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .hero-section {
@@ -276,7 +276,7 @@ textarea {
   padding: 0.55rem 0.9rem;
   color: var(--brand);
   font-size: 0.86rem;
-  font-weight: 600;
+  font-weight: 400;
   box-shadow: 0 8px 20px rgb(19 47 58 / 8%);
 }
 
@@ -372,7 +372,7 @@ textarea {
 .section h2 {
   font-size: clamp(1.45rem, 2.5vw, 2rem);
   line-height: 1.16;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .section-heading p,
@@ -414,14 +414,14 @@ textarea {
   margin: 0 0 0.75rem;
   color: var(--brand-dark);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .card a {
   display: inline-block;
   margin-top: 1rem;
   color: var(--brand);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .accent-bar {
@@ -468,7 +468,7 @@ textarea {
   color: var(--brand-dark);
   font-size: clamp(1.45rem, 2.5vw, 2rem);
   line-height: 1.18;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .quote-panel {
@@ -589,7 +589,7 @@ textarea {
   display: grid;
   gap: 0.45rem;
   color: var(--brand-dark);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .form-card input,
@@ -613,7 +613,7 @@ textarea {
   border-radius: 999px;
   background: var(--brand);
   color: white;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .detail-list {
@@ -645,7 +645,7 @@ textarea {
   background: white;
   padding: 0.75rem 1rem;
   color: var(--brand-dark);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .gallery-grid {
