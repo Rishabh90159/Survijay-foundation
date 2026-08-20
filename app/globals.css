@@ -85,9 +85,7 @@ textarea {
 
 header .brand span,
 header .brand strong,
-header .nav-link,
-header .donate-link,
-header .mobile-menu-panel a {
+header .donate-link {
   font-weight: 600;
 }
 
