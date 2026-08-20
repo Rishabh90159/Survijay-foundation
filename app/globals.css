@@ -108,7 +108,7 @@ textarea {
   display: block;
   height: 0.14rem;
   width: 1.35rem;
-  background: var(--accent);
+  background: var(--brand);
 }
 
 .mobile-menu-panel {
