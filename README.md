@@ -1,6 +1,6 @@
 # SurVijay Foundation Website
 
-Static NGO website built with Vinext, React, and Tailwind CSS.
+Static NGO website built with Next.js App Router, React, and Tailwind CSS.
 
 ## Requirements
 
@@ -21,6 +21,16 @@ Open `http://localhost:3000` in your browser.
 - `npm run build`: create a production build
 - `npm start`: run the production server locally after build
 - `npm test`: run the build check
+
+## Deploy On Vercel
+
+1. Push this project to GitHub, GitLab, or Bitbucket.
+2. Import the repository in Vercel.
+3. Keep the framework preset as `Next.js`.
+4. Use the default commands:
+   - Install command: `npm install`
+   - Build command: `npm run build`
+   - Output directory: Vercel auto-detects this for Next.js.
 
 ## Project Structure
 
