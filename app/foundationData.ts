@@ -1,5 +1,6 @@
 export const foundationConfig = {
   name: "Survijay Foundation",
+  legalName: "SURVIJAY FOUNDATION",
   cin: "U85320UP2022NPL167131",
   registrationNumber: "167131",
   incorporationDate: "06 July 2022",
@@ -8,6 +9,8 @@ export const foundationConfig = {
   registrar: "RoC Kanpur",
   classification: "Non-government company",
   activity: "Social work activities without accommodation",
+  city: "Rampur",
+  state: "Uttar Pradesh",
   location: "Rampur, Uttar Pradesh",
   address:
     "House No-17, Village Faizulla Nagar, Post Lamwa Kheda, Tehsil Tanda, Rampur, Uttar Pradesh - 244925",
@@ -18,7 +21,7 @@ export const foundationConfig = {
   phone: "",
   whatsapp: "",
   email: "",
-  googleMapsUrl: "",
+  mapsUrl: "",
   facebook: "",
   instagram: "",
   youtube: "",
@@ -35,16 +38,16 @@ export const navigationItems = [
 
 export const purposeContent = [
   {
-    title: "Our Mission",
-    text: "To contribute toward meaningful social welfare initiatives and support communities through responsible and compassionate action.",
+    title: "Mission",
+    text: "To support meaningful social welfare initiatives and contribute toward stronger, more supported communities.",
   },
   {
-    title: "Our Vision",
-    text: "To help create communities where people have greater access to support, opportunity and dignity.",
+    title: "Vision",
+    text: "To encourage a society where people have greater access to support, opportunity and dignity.",
   },
   {
-    title: "Our Approach",
-    text: "Working closely with communities and focusing on initiatives that can create practical and lasting value.",
+    title: "Approach",
+    text: "To understand local needs, work responsibly and focus on initiatives that create practical value for communities.",
   },
 ];
 
@@ -52,15 +55,19 @@ export const purposeContent = [
 export const focusAreas = [
   {
     title: "Community Welfare",
-    text: "Broad social welfare efforts aligned with the foundation's registered activity.",
+    text: "Supporting initiatives that respond to local community needs.",
   },
   {
     title: "Social Support",
-    text: "Practical support pathways for communities that need care, guidance, and connection.",
+    text: "Connecting people with support, awareness and community-focused initiatives.",
   },
   {
     title: "Community Development",
-    text: "Community-focused initiatives shaped around local needs and responsible participation.",
+    text: "Encouraging long-term social participation and stronger local communities.",
+  },
+  {
+    title: "Outreach & Awareness",
+    text: "Creating opportunities for communication, participation and social awareness.",
   },
 ];
 
@@ -68,23 +75,23 @@ export const workAreas = [
   {
     title: "Community Initiatives",
     description:
-      "Verified community-level initiatives will be documented here with dates, locations, and activity details.",
+      "Supporting activities designed around identified community needs.",
     location: "",
     date: "",
     image: "",
   },
   {
-    title: "Social Welfare Activities",
+    title: "Social Outreach",
     description:
-      "Field activities connected to social work and community welfare will be added with official records.",
+      "Encouraging participation, awareness and stronger connections within communities.",
     location: "",
     date: "",
     image: "",
   },
   {
-    title: "Support & Outreach",
+    title: "Welfare Support",
     description:
-      "Outreach notes and photographs will be published with clear source details once confirmed.",
+      "Contributing to initiatives that support individuals, families and local communities.",
     location: "",
     date: "",
     image: "",
@@ -94,15 +101,15 @@ export const workAreas = [
 export const getInvolvedOptions = [
   {
     title: "Volunteer",
-    text: "Give your time and skills to support community initiatives.",
+    text: "Connect with us if you would like to contribute your time and skills to community initiatives.",
   },
   {
     title: "Partner With Us",
-    text: "Organisations and individuals can connect with us to explore opportunities to work together.",
+    text: "We welcome conversations with individuals and organisations interested in collaborative social initiatives.",
   },
   {
     title: "Support Our Work",
-    text: "Get in touch to learn how you can support Survijay Foundation's initiatives.",
+    text: "Get in touch to learn more about ways to support Survijay Foundation and its activities.",
   },
 ];
 
@@ -117,27 +124,27 @@ export const foundationImages = {
       alt: "Community welfare visual for Survijay Foundation website",
       caption: "Community welfare",
       date: "",
-      location: "Rampur, Uttar Pradesh",
+      location: "",
     },
     {
       src: "/images/banner-education.png",
       alt: "Community support visual for Survijay Foundation website",
       caption: "Social support",
       date: "",
-      location: "Rampur, Uttar Pradesh",
+      location: "",
     },
     {
       src: "/images/banner-empowerment.png",
       alt: "Community development visual for Survijay Foundation website",
       caption: "Community development",
       date: "",
-      location: "Rampur, Uttar Pradesh",
+      location: "",
     },
   ],
 };
 
 export const organisationDetails = [
-  ["Organisation", foundationConfig.name],
+  ["Legal Name", foundationConfig.legalName],
   ["CIN", foundationConfig.cin],
   ["Registration Number", foundationConfig.registrationNumber],
   ["Incorporated", foundationConfig.incorporationDate],

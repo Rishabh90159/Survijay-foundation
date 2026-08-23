@@ -4,7 +4,7 @@ import { focusAreas, workAreas } from "../foundationData";
 export const metadata: Metadata = {
   title: "Our Work",
   description:
-    "Explore broad social welfare focus areas prepared for verified Survijay Foundation initiative details.",
+    "Explore Survijay Foundation's broad community welfare focus areas.",
 };
 
 export default function ProgramsPage() {
@@ -12,10 +12,10 @@ export default function ProgramsPage() {
     <main>
       <section className="page-hero page-hero-community">
         <p className="eyebrow">Our Work</p>
-        <h1>Community welfare, presented with care.</h1>
+        <h1>Our Work</h1>
         <p>
-          This page is prepared to showcase verified initiatives when activity
-          details, locations, dates, and photographs are provided.
+          Our work is centred around community welfare, social support and
+          responsible local engagement.
         </p>
       </section>
       <section className="section">
@@ -23,7 +23,7 @@ export default function ProgramsPage() {
           <p className="eyebrow">Focus Areas</p>
           <h2>Broad areas aligned with social welfare.</h2>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-4">
           {focusAreas.map((area) => (
             <article className="card" key={area.title}>
               <div className="accent-bar" />

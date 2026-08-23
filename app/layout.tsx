@@ -6,13 +6,10 @@ const whatsappMessage =
   "Hello, I would like to know more about Survijay Foundation and its work.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
-  title: {
-    default: "Survijay Foundation | Social Welfare Organisation in Rampur",
-    template: "%s | Survijay Foundation",
-  },
+  metadataBase: new URL("https://survijay-foundation.vercel.app"),
+  title: "Survijay Foundation | Social Welfare Organisation in Rampur",
   description:
-    "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
+    "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, focused on community welfare and responsible social initiatives.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -20,14 +17,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Survijay Foundation",
     description:
-      "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
+      "Working toward stronger and more supported communities in Rampur, Uttar Pradesh.",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Survijay Foundation",
     description:
-      "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
+      "Working toward stronger and more supported communities in Rampur, Uttar Pradesh.",
     images: ["/og.png"],
   },
 };
@@ -54,8 +51,8 @@ export default function RootLayout({
               ))}
             </div>
             <div className="nav-actions">
-              <a className="donate-link desktop-donate" href="/get-involved#contact-form">
-                Support Our Work
+              <a className="header-cta desktop-cta" href="/get-involved">
+                Get Involved
               </a>
               <details className="mobile-menu">
                 <summary aria-label="Open menu">
@@ -69,7 +66,7 @@ export default function RootLayout({
                       {label}
                     </a>
                   ))}
-                  <a href="/get-involved#contact-form">Support Our Work</a>
+                  <a href="/get-involved">Get Involved</a>
                 </div>
               </details>
             </div>
@@ -105,55 +102,52 @@ export default function RootLayout({
           </div>
         )}
         <footer className="site-footer bg-[#102730] px-5 py-12 text-white sm:px-8">
-          <div className="footer-main mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.7fr_0.7fr_0.8fr]">
+          <div className="footer-main mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-[1.2fr_0.7fr_0.8fr_0.8fr_0.7fr]">
             <div className="footer-about">
               <a className="brand text-white" href="/">
                 <span>SV</span>
                 <strong>{foundationConfig.name}</strong>
               </a>
               <p className="mt-4 max-w-md text-sm leading-7 text-white/72">
-                Working toward community welfare and meaningful social
-                initiatives.
+                Survijay Foundation is a social welfare organisation based in
+                Rampur, Uttar Pradesh, working toward community support and
+                responsible social initiatives.
               </p>
             </div>
             <div className="footer-group">
-              <h2 className="footer-title">Quick links</h2>
+              <h2 className="footer-title">About</h2>
               <div className="footer-links">
-                {navigationItems.slice(1).map(([label, href]) => (
-                  <a href={href} key={href}>
-                    {label}
-                  </a>
-                ))}
+                <a href="/about">About Us</a>
+                <a href="/about#purpose">Our Purpose</a>
+                <a href="/programs">Our Work</a>
               </div>
             </div>
             <div className="footer-group">
-              <h2 className="footer-title">Support</h2>
+              <h2 className="footer-title">Get Involved</h2>
               <div className="footer-links">
                 <a href="/get-involved">Volunteer</a>
                 <a href="/get-involved">Partner With Us</a>
-                <a href="/get-involved#contact-form">Support Our Work</a>
+                <a href="/get-involved">Support Our Work</a>
               </div>
             </div>
             <div className="footer-group footer-contact">
               <h2 className="footer-title">Contact</h2>
-              <p className="text-sm leading-7 text-white/72">
-                {foundationConfig.location}
-                {(foundationConfig.email || foundationConfig.phone) && <br />}
-                {foundationConfig.email && (
-                  <>
-                    {foundationConfig.email}
-                    <br />
-                  </>
-                )}
-                {foundationConfig.phone}
-              </p>
+              <div className="footer-links">
+                <span>{foundationConfig.location}</span>
+                <span>Registered Address</span>
+                <a href="/contact">Contact Us</a>
+              </div>
+            </div>
+            <div className="footer-group">
+              <h2 className="footer-title">Legal</h2>
+              <div className="footer-links">
+                <span>CIN: {foundationConfig.cin}</span>
+                <span>Status: {foundationConfig.status}</span>
+              </div>
             </div>
           </div>
           <div className="footer-bottom">
             <p>© 2026 {foundationConfig.name}. All rights reserved.</p>
-            <div>
-              <span>CIN: {foundationConfig.cin}</span>
-            </div>
           </div>
         </footer>
       </body>

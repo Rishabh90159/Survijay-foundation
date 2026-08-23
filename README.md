@@ -1,6 +1,7 @@
 # SurVijay Foundation Website
 
-Static NGO website built with Next.js App Router, React, and Tailwind CSS.
+Official website project for Survijay Foundation, a social welfare organisation
+based in Rampur, Uttar Pradesh.
 
 ## Requirements
 
@@ -35,4 +36,4 @@ Open `http://localhost:3000` in your browser.
 ## Project Structure
 
 - `app/`: routes, layout, pages, and global styles
-- `public/`: static images and icons
+- `public/`: website images and icons

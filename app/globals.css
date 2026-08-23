@@ -38,6 +38,7 @@ a {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }
@@ -85,7 +86,7 @@ textarea {
 
 header .brand span,
 header .brand strong,
-header .donate-link {
+header .header-cta {
   font-weight: 600;
 }
 
@@ -144,7 +145,7 @@ header .donate-link {
   background: rgb(20 108 99 / 8%);
 }
 
-.donate-link,
+.header-cta,
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
@@ -372,7 +373,7 @@ header .donate-link {
   line-height: 1.05;
 }
 
-.donate-link,
+.header-cta,
 .btn-primary {
   background: var(--accent);
   color: #182f36;
@@ -1013,7 +1014,7 @@ header .donate-link {
     white-space: nowrap;
   }
 
-  .donate-link {
+  .header-cta {
     min-height: 2.5rem;
     padding-inline: 1rem;
   }
@@ -1122,7 +1123,7 @@ header .donate-link {
 }
 
 @media (max-width: 1023px) {
-  .desktop-donate {
+  .desktop-cta {
     display: none;
   }
 

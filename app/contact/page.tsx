@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { foundationConfig, getInvolvedOptions } from "../foundationData";
+import { foundationConfig } from "../foundationData";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,8 +27,8 @@ export default function ContactPage() {
           <h2>Registered Location</h2>
           <p>{foundationConfig.location}</p>
           <p>{foundationConfig.address}</p>
-          {foundationConfig.googleMapsUrl && (
-            <a className="btn-secondary mt-4" href={foundationConfig.googleMapsUrl}>
+          {foundationConfig.mapsUrl && (
+            <a className="btn-secondary mt-4" href={foundationConfig.mapsUrl}>
               Get Directions
             </a>
           )}
@@ -52,18 +52,18 @@ export default function ContactPage() {
             <input name="phone" type="tel" required />
           </label>
           <label>
-            Email *
-            <input name="email" type="email" required />
+            Email
+            <input name="email" type="email" />
           </label>
           <label>
             I&apos;m Interested In *
             <select name="interest" required>
               <option value="">Select an option</option>
-              {getInvolvedOptions.map((option) => (
-                <option value={option.title} key={option.title}>
-                  {option.title}
-                </option>
-              ))}
+              <option value="Volunteering">Volunteering</option>
+              <option value="Partnership">Partnership</option>
+              <option value="Supporting an Initiative">
+                Supporting an Initiative
+              </option>
               <option value="General Enquiry">General Enquiry</option>
             </select>
           </label>
@@ -73,8 +73,8 @@ export default function ContactPage() {
           </label>
           <button type="button">Send Enquiry</button>
           <p className="form-note">
-            Enquiry delivery will be connected when official email or backend
-            details are provided.
+            Thank you. Contact functionality will be connected with the
+            organisation&apos;s official communication channel.
           </p>
         </form>
       </section>

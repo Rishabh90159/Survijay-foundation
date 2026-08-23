@@ -12,7 +12,7 @@ export default function GetInvolvedPage() {
     <main>
       <section className="page-hero page-hero-empowerment">
         <p className="eyebrow">Get Involved</p>
-        <h1>Be Part of the Change</h1>
+        <h1>Get Involved With Survijay Foundation</h1>
         <p>
           Connect with Survijay Foundation to explore volunteering,
           collaboration, or support opportunities.
@@ -32,9 +32,9 @@ export default function GetInvolvedPage() {
         <div className="wide-panel">
           <h2>Support Our Work</h2>
           <p>
-            No online payment or donation checkout is connected on this website.
-            Please use the contact page for support enquiries until verified
-            support details are provided by the organisation.
+            Please use the contact page for support enquiries. Verified support
+            details can be shared by the organisation through its official
+            communication channel.
           </p>
           <a className="btn-primary mt-4" href="/contact">
             Get Involved

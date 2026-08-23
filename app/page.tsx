@@ -9,10 +9,10 @@ import {
 } from "./foundationData";
 
 const trustFacts = [
-  ["Registered Organisation", foundationConfig.classification],
   ["Established", foundationConfig.establishedYear],
-  ["Location", foundationConfig.location],
-  ["Status", foundationConfig.status],
+  ["Based In", foundationConfig.location],
+  ["Organisation Status", foundationConfig.status],
+  ["Registration", `CIN ${foundationConfig.cin}`],
 ];
 
 export default function Home() {
@@ -27,14 +27,14 @@ export default function Home() {
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="hero-copy">
-            <p className="hero-pill">SURVIJAY FOUNDATION</p>
+            <p className="hero-pill">Survijay Foundation</p>
             <h1 className="hero-title">
-              Together, We Can Build Stronger Communities.
+              Together for Stronger Communities.
             </h1>
             <p className="hero-text">
               Survijay Foundation is a social welfare organisation based in
-              Rampur, Uttar Pradesh, working toward community support and
-              meaningful social initiatives.
+              Rampur, Uttar Pradesh, working to support communities through
+              responsible and people-focused initiatives.
             </p>
             <div className="hero-actions">
               <a className="btn-primary" href="#our-work">
@@ -49,6 +49,9 @@ export default function Home() {
       </section>
 
       <section className="trust-strip" aria-label="Verified organisation facts">
+        <div className="section-heading trust-heading">
+          <p className="eyebrow">About the Foundation</p>
+        </div>
         <div className="trust-strip-grid">
           {trustFacts.map(([label, value]) => (
             <div key={label}>
@@ -67,13 +70,15 @@ export default function Home() {
           </div>
           <div className="stacked-copy">
             <p>
-              Survijay Foundation is a registered organisation based in Rampur,
-              Uttar Pradesh. Incorporated in 2022, the foundation operates in
-              the area of social work and community welfare.
+              Survijay Foundation is a registered social welfare organisation
+              based in Rampur, Uttar Pradesh. The organisation was incorporated
+              on 06 July 2022 and operates in the area of social work and
+              community welfare.
             </p>
             <p>
-              Our aim is to support meaningful social initiatives and contribute
-              toward stronger, more supported communities.
+              Our focus is on understanding community needs and supporting
+              meaningful initiatives that can create practical and lasting
+              value.
             </p>
             <dl className="info-list compact">
               <div>
@@ -99,13 +104,12 @@ export default function Home() {
 
       <section className="soft-band">
         <div className="mx-auto max-w-7xl">
-          <div className="section-heading">
+          <div className="section-heading" id="purpose">
             <p className="eyebrow">Our Purpose</p>
-            <h2>Guided by responsible community welfare.</h2>
+            <h2>Our Purpose</h2>
             <p>
-              The foundation&apos;s work is presented with clear, conservative
-              information while formal program records and activity details are
-              documented.
+              These positioning statements guide the website&apos;s communication
+              about Survijay Foundation&apos;s community welfare work.
             </p>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
@@ -129,7 +133,7 @@ export default function Home() {
             Survijay Foundation programs and field records are provided.
           </p>
         </div>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-4">
           {focusAreas.map((area) => (
             <article className="card" key={area.title}>
               <div className="accent-bar" />
@@ -143,10 +147,10 @@ export default function Home() {
       <section className="section pt-0">
         <div className="section-heading">
           <p className="eyebrow">Our Work</p>
-          <h2>Verified initiatives will be documented with care.</h2>
+          <h2>Our Work</h2>
           <p>
-            Program updates will include confirmed activity details, locations,
-            dates, and photographs as official records become available.
+            Our work is centred around community welfare, social support and
+            responsible local engagement.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -183,7 +187,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="section-heading">
             <p className="eyebrow">Get Involved</p>
-            <h2>Be Part of the Change</h2>
+            <h2>Get Involved</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {getInvolvedOptions.map((item) => (

@@ -42,7 +42,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <section className="soft-band">
+      <section className="soft-band" id="purpose">
         <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
           {purposeContent.map((item) => (
             <article className="card" key={item.title}>

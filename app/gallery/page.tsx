@@ -14,8 +14,8 @@ export default function GalleryPage() {
         <p className="eyebrow">Gallery</p>
         <h1>Moments From Our Work</h1>
         <p>
-          This gallery is structured for real activity photographs, captions,
-          locations, and dates from Survijay Foundation.
+          Community engagement visuals are shown in a neutral format and can be
+          replaced with verified Survijay Foundation activity photographs.
         </p>
       </section>
       <section className="section gallery-grid feature-gallery">
