@@ -1,44 +1,33 @@
 import type { Metadata } from "next";
+import { foundationConfig, navigationItems } from "./foundationData";
 import "./globals.css";
 
-const navItems = [
-  ["Home", "/"],
-  ["About", "/about"],
-  ["Programs", "/programs"],
-  ["Impact", "/impact"],
-  ["Stories", "/stories"],
-  ["Gallery", "/gallery"],
-  ["Get Involved", "/get-involved"],
-  ["Volunteer", "/volunteer"],
-  ["Transparency", "/transparency"],
-  ["Contact", "/contact"],
-];
-
-const contactPhone = "+919876543210";
+const whatsappMessage =
+  "Hello, I would like to know more about Survijay Foundation and its work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: "SurVijay Foundation | NGO for Education, Health and Community Support",
-    template: "%s | SurVijay Foundation",
+    default: "Survijay Foundation | Social Welfare Organisation in Rampur",
+    template: "%s | Survijay Foundation",
   },
   description:
-    "A static, SEO-friendly NGO website for SurVijay Foundation, focused on education, health, women empowerment, volunteering, and transparent impact.",
+    "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "SurVijay Foundation",
+    title: "Survijay Foundation",
     description:
-      "Helping communities build safer, stronger futures through education, health, and volunteer-led support.",
+      "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SurVijay Foundation",
+    title: "Survijay Foundation",
     description:
-      "Helping communities build safer, stronger futures through education, health, and volunteer-led support.",
+      "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, working toward community support and meaningful social initiatives.",
     images: ["/og.png"],
   },
 };
@@ -53,20 +42,20 @@ export default function RootLayout({
       <body>
         <header className="sticky top-0 z-50 border-b border-[#d9e5e0] bg-white/94 backdrop-blur">
           <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8">
-            <a className="brand" href="/" aria-label="SurVijay Foundation home">
+            <a className="brand" href="/" aria-label="Survijay Foundation home">
               <span>SV</span>
-              <strong>SurVijay Foundation</strong>
+              <strong>{foundationConfig.name}</strong>
             </a>
             <div className="hidden items-center gap-4 lg:flex">
-              {navItems.map(([label, href]) => (
+              {navigationItems.map(([label, href]) => (
                 <a className="nav-link" href={href} key={href}>
                   {label}
                 </a>
               ))}
             </div>
             <div className="nav-actions">
-              <a className="donate-link desktop-donate" href="/donate">
-                Donate
+              <a className="donate-link desktop-donate" href="/get-involved#contact-form">
+                Support Our Work
               </a>
               <details className="mobile-menu">
                 <summary aria-label="Open menu">
@@ -75,56 +64,62 @@ export default function RootLayout({
                   <span />
                 </summary>
                 <div className="mobile-menu-panel" aria-label="Mobile pages">
-                  {navItems.map(([label, href]) => (
+                  {navigationItems.map(([label, href]) => (
                     <a href={href} key={href}>
                       {label}
                     </a>
                   ))}
-                  <a href="/donate">Donate</a>
+                  <a href="/get-involved#contact-form">Support Our Work</a>
                 </div>
               </details>
             </div>
           </nav>
         </header>
         {children}
-        <div className="floating-contact" aria-label="Quick contact">
-          <a
-            className="floating-contact-button floating-contact-whatsapp"
-            href={`https://wa.me/${contactPhone.replace("+", "")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Chat with SurVijay Foundation on WhatsApp"
-          >
-            <svg viewBox="0 0 32 32" aria-hidden="true">
-              <path d="M16.04 4.02A11.9 11.9 0 0 0 5.9 22.2L4.3 28l5.96-1.56a11.86 11.86 0 0 0 5.78 1.48h.01A11.95 11.95 0 0 0 16.04 4.02Zm.01 21.88h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.22-3.54.93.94-3.45-.24-.36A9.91 9.91 0 1 1 16.05 25.9Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z" />
-            </svg>
-          </a>
-          <a
-            className="floating-contact-button floating-contact-call"
-            href={`tel:${contactPhone}`}
-            aria-label="Call SurVijay Foundation"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.36 1.04-.25 1.14.37 2.36.57 3.55.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.19.2 2.41.57 3.55.11.36.03.76-.25 1.04l-2.2 2.2Z" />
-            </svg>
-          </a>
-        </div>
+        {(foundationConfig.whatsapp || foundationConfig.phone) && (
+          <div className="floating-contact" aria-label="Quick contact">
+            {foundationConfig.whatsapp && (
+              <a
+                className="floating-contact-button floating-contact-whatsapp"
+                href={`https://wa.me/${foundationConfig.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(whatsappMessage)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Survijay Foundation on WhatsApp"
+              >
+                <svg viewBox="0 0 32 32" aria-hidden="true">
+                  <path d="M16.04 4.02A11.9 11.9 0 0 0 5.9 22.2L4.3 28l5.96-1.56a11.86 11.86 0 0 0 5.78 1.48h.01A11.95 11.95 0 0 0 16.04 4.02Zm.01 21.88h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.22-3.54.93.94-3.45-.24-.36A9.91 9.91 0 1 1 16.05 25.9Zm5.43-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z" />
+                </svg>
+              </a>
+            )}
+            {foundationConfig.phone && (
+              <a
+                className="floating-contact-button floating-contact-call"
+                href={`tel:${foundationConfig.phone}`}
+                aria-label="Call Survijay Foundation"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.28-.28.68-.36 1.04-.25 1.14.37 2.36.57 3.55.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.19.2 2.41.57 3.55.11.36.03.76-.25 1.04l-2.2 2.2Z" />
+                </svg>
+              </a>
+            )}
+          </div>
+        )}
         <footer className="site-footer bg-[#102730] px-5 py-12 text-white sm:px-8">
           <div className="footer-main mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_0.7fr_0.7fr_0.8fr]">
             <div className="footer-about">
               <a className="brand text-white" href="/">
                 <span>SV</span>
-                <strong>SurVijay Foundation</strong>
+                <strong>{foundationConfig.name}</strong>
               </a>
               <p className="mt-4 max-w-md text-sm leading-7 text-white/72">
-                A community-first NGO website blueprint built as a static,
-                accessible, SEO-ready Next.js application.
+                Working toward community welfare and meaningful social
+                initiatives.
               </p>
             </div>
             <div className="footer-group">
               <h2 className="footer-title">Quick links</h2>
               <div className="footer-links">
-                {navItems.slice(0, 5).map(([label, href]) => (
+                {navigationItems.slice(1).map(([label, href]) => (
                   <a href={href} key={href}>
                     {label}
                   </a>
@@ -134,36 +129,30 @@ export default function RootLayout({
             <div className="footer-group">
               <h2 className="footer-title">Support</h2>
               <div className="footer-links">
-                {navItems.slice(5).map(([label, href]) => (
-                  <a href={href} key={href}>
-                    {label}
-                  </a>
-                ))}
-                <a href="/donate">Donate</a>
+                <a href="/get-involved">Volunteer</a>
+                <a href="/get-involved">Partner With Us</a>
+                <a href="/get-involved#contact-form">Support Our Work</a>
               </div>
             </div>
             <div className="footer-group footer-contact">
               <h2 className="footer-title">Contact</h2>
               <p className="text-sm leading-7 text-white/72">
-                hello@survijay.org
-                <br />
-                +91 98765 43210
-                <br />
-                New Delhi, India
+                {foundationConfig.location}
+                {(foundationConfig.email || foundationConfig.phone) && <br />}
+                {foundationConfig.email && (
+                  <>
+                    {foundationConfig.email}
+                    <br />
+                  </>
+                )}
+                {foundationConfig.phone}
               </p>
             </div>
           </div>
           <div className="footer-bottom">
-            <p>
-              © 2026 All Rights Reserved. Developed by{" "}
-              <a href="/" aria-label="SurVijay Foundation">
-                SurVijay Foundation
-              </a>
-            </p>
+            <p>© 2026 {foundationConfig.name}. All rights reserved.</p>
             <div>
-              <a href="/transparency">Privacy &amp; Security</a>
-              <span>|</span>
-              <a href="/transparency">Terms &amp; Conditions</a>
+              <span>CIN: {foundationConfig.cin}</span>
             </div>
           </div>
         </footer>

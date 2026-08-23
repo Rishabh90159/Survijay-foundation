@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-
-const galleryItems = [
-  ["Learning circle", "Children attending reading and homework support."],
-  ["Health camp", "Community members joining a hygiene awareness session."],
-  ["Volunteer day", "Supporters helping with activity setup and outreach."],
-  ["Women workshop", "Skill-building and confidence sessions for local women."],
-  ["Relief drive", "Essential kits prepared for families during urgent needs."],
-  ["Environment drive", "Local clean-up and plantation activities."],
-];
+import { foundationImages } from "../foundationData";
 
 export const metadata: Metadata = {
   title: "Gallery",
   description:
-    "View SurVijay Foundation activity gallery for learning sessions, health camps, volunteer days, workshops, relief drives, and environment work.",
+    "A photo gallery structure for Survijay Foundation community welfare photographs.",
 };
 
 export default function GalleryPage() {
@@ -20,19 +12,18 @@ export default function GalleryPage() {
     <main>
       <section className="page-hero page-hero-community">
         <p className="eyebrow">Gallery</p>
-        <h1>Photos and field moments help people trust the work.</h1>
+        <h1>Moments From Our Work</h1>
         <p>
-          The gallery is ready for real event photos. For now, these categories
-          show how the content can be organized.
+          This gallery is structured for real activity photographs, captions,
+          locations, and dates from Survijay Foundation.
         </p>
       </section>
-      <section className="section gallery-grid">
-        {galleryItems.map(([title, text], index) => (
-          <article className="gallery-tile" key={title}>
-            <div className="gallery-image" />
-            <span>0{index + 1}</span>
-            <h2>{title}</h2>
-            <p>{text}</p>
+      <section className="section gallery-grid feature-gallery">
+        {foundationImages.gallery.map((image) => (
+          <article className="gallery-tile" key={image.caption}>
+            <img src={image.src} alt={image.alt} loading="lazy" />
+            <h2>{image.caption}</h2>
+            {image.location && <p>{image.location}</p>}
           </article>
         ))}
       </section>

@@ -1,44 +1,44 @@
 import type { Metadata } from "next";
+import { getInvolvedOptions } from "../foundationData";
 
 export const metadata: Metadata = {
   title: "Get Involved",
   description:
-    "Get involved with SurVijay Foundation through volunteering, offline donations, CSR partnerships, sponsorships, and community drives.",
+    "Get involved with Survijay Foundation through volunteering, collaboration, or support enquiries.",
 };
 
 export default function GetInvolvedPage() {
   return (
     <main>
       <section className="page-hero page-hero-empowerment">
-        <p className="eyebrow">Get involved</p>
-        <h1>Choose the way you want to support the community.</h1>
+        <p className="eyebrow">Get Involved</p>
+        <h1>Be Part of the Change</h1>
         <p>
-          Visitors can quickly understand the main support paths: volunteer
-          time, donate offline, sponsor a program, or partner through CSR.
+          Connect with Survijay Foundation to explore volunteering,
+          collaboration, or support opportunities.
         </p>
       </section>
-      <section className="section grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {[
-          ["Volunteer", "/volunteer", "Join teaching, field events, awareness sessions, documentation, and outreach."],
-          ["Donate Offline", "/donate", "Use verified bank, UPI, or receipt contact details once confirmed by the NGO."],
-          ["Partner", "/contact", "Collaborate for CSR, workplace giving, program sponsorship, or field campaigns."],
-          ["Share", "/stories", "Help community stories reach supporters, volunteers, and local partners."],
-        ].map(([title, href, text]) => (
-          <article className="card" key={title}>
+      <section className="section grid gap-5 md:grid-cols-3">
+        {getInvolvedOptions.map((item) => (
+          <article className="card" key={item.title}>
             <div className="accent-bar" />
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <a href={href}>Continue</a>
+            <h2>{item.title}</h2>
+            <p>{item.text}</p>
+            <a href="/contact">Contact Us</a>
           </article>
         ))}
       </section>
-      <section className="section pt-0">
+      <section className="section pt-0" id="contact-form">
         <div className="wide-panel">
-          <h2>For corporate and institutional partners</h2>
+          <h2>Support Our Work</h2>
           <p>
-            This page can later include CSR documents, partnership forms, past
-            collaborator logos, sponsorship slabs, and downloadable proposals.
+            No online payment or donation checkout is connected on this website.
+            Please use the contact page for support enquiries until verified
+            support details are provided by the organisation.
           </p>
+          <a className="btn-primary mt-4" href="/contact">
+            Get Involved
+          </a>
         </div>
       </section>
     </main>

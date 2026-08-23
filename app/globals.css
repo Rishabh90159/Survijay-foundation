@@ -183,6 +183,11 @@ header .donate-link {
   animation-delay: calc(var(--slide-index) * 6s);
 }
 
+.hero-image.is-visible {
+  opacity: 1;
+  animation: none;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -316,6 +321,37 @@ header .donate-link {
   color: white;
 }
 
+.trust-strip {
+  border-top: 1px solid rgb(19 47 58 / 10%);
+  border-bottom: 1px solid rgb(19 47 58 / 10%);
+  background: #fffaf0;
+  padding: 1.1rem 1.25rem;
+}
+
+.trust-strip-grid {
+  display: grid;
+  max-width: 80rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.trust-strip span,
+.info-list dt {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.trust-strip strong,
+.info-list dd {
+  display: block;
+  margin: 0.2rem 0 0;
+  color: var(--brand-dark);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 .stats-grid {
   display: grid;
   max-width: 80rem;
@@ -365,6 +401,17 @@ header .donate-link {
 .section-heading {
   max-width: 44rem;
   margin-bottom: 1.5rem;
+}
+
+.split-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 0.8fr 1.2fr;
+}
+
+.stacked-copy {
+  display: grid;
+  gap: 1rem;
 }
 
 .section-heading h2,
@@ -598,13 +645,39 @@ header .donate-link {
   font-weight: 400;
 }
 
+.info-list {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.4rem 0 0;
+}
+
+.info-list div {
+  display: grid;
+  gap: 0.15rem;
+  border-bottom: 1px solid rgb(19 47 58 / 10%);
+  padding-bottom: 0.75rem;
+}
+
+.info-list.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .form-card input,
+.form-card select,
 .form-card textarea {
   width: 100%;
   border: 1px solid rgb(19 47 58 / 18%);
   border-radius: 8px;
   padding: 0.9rem 1rem;
+  background: white;
   color: var(--brand-dark);
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
 }
 
 .form-card textarea {
@@ -702,6 +775,59 @@ header .donate-link {
   margin-bottom: 1.25rem;
   color: var(--muted);
   line-height: 1.6;
+}
+
+.gallery-tile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery-tile h3 {
+  margin: 1rem 1.25rem 0.25rem;
+  color: var(--brand-dark);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.feature-gallery .gallery-tile:first-child {
+  grid-column: span 2;
+}
+
+.leader-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgb(19 47 58 / 10%);
+  border-radius: 8px;
+  background: white;
+  padding: 1.25rem;
+  box-shadow: 0 18px 44px rgb(19 47 58 / 8%);
+}
+
+.leader-avatar {
+  display: grid;
+  height: 4rem;
+  min-width: 4rem;
+  place-items: center;
+  border-radius: 999px;
+  background: rgb(20 108 99 / 12%);
+  color: var(--brand);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.leader-card h3 {
+  margin: 0 0 0.2rem;
+  color: var(--brand-dark);
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.leader-card p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .floating-contact {
@@ -950,6 +1076,16 @@ header .donate-link {
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trust-strip-grid,
+  .split-layout,
+  .info-list.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-gallery .gallery-tile:first-child {
+    grid-column: auto;
   }
 
   .stats-grid strong {

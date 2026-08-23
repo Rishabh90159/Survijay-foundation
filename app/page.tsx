@@ -1,195 +1,240 @@
-import type { CSSProperties } from "react";
+import {
+  focusAreas,
+  foundationConfig,
+  foundationImages,
+  getInvolvedOptions,
+  organisationDetails,
+  purposeContent,
+  workAreas,
+} from "./foundationData";
 
-const programs = [
-  {
-    title: "Learning Support",
-    href: "/programs/education",
-    text: "After-school classes, mentoring, and school-readiness support for children who need extra attention.",
-  },
-  {
-    title: "Community Health",
-    href: "/programs/health",
-    text: "Health awareness camps, hygiene sessions, and referral support for families in underserved communities.",
-  },
-  {
-    title: "Women Empowerment",
-    href: "/programs/women-empowerment",
-    text: "Skill-building circles, financial literacy sessions, and confidence programs for women and adolescent girls.",
-  },
-];
-
-const stats = [
-  ["4,800+", "people reached"],
-  ["32", "community drives"],
-  ["18", "learning groups"],
-  ["120+", "active volunteers"],
-];
-
-const carouselImages = [
-  {
-    src: "/images/community-hero.png",
-    alt: "Volunteers teaching children in a community courtyard",
-  },
-  {
-    src: "/images/carousel-education.png",
-    alt: "Volunteer helping children read in a community learning room",
-  },
-  {
-    src: "/images/carousel-health.png",
-    alt: "Community health awareness session with families",
-  },
-  {
-    src: "/images/carousel-empowerment.png",
-    alt: "Women and youth participating in an empowerment workshop",
-  },
+const trustFacts = [
+  ["Registered Organisation", foundationConfig.classification],
+  ["Established", foundationConfig.establishedYear],
+  ["Location", foundationConfig.location],
+  ["Status", foundationConfig.status],
 ];
 
 export default function Home() {
   return (
     <main>
-      <section className="hero-section">
-        <div className="hero-carousel" aria-label="SurVijay Foundation community work images">
-          {carouselImages.map((image, index) => (
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="hero-image"
-              style={{ "--slide-index": index } as CSSProperties}
-              key={image.src}
-            />
-          ))}
-        </div>
+      <section className="hero-section ngo-hero">
+        <img
+          src={foundationImages.hero}
+          alt="Community welfare visual for Survijay Foundation"
+          className="hero-image is-visible"
+        />
         <div className="hero-overlay" />
         <div className="hero-inner">
           <div className="hero-copy">
-            <p className="hero-pill">
-              Education, health, and dignity for every community
-            </p>
+            <p className="hero-pill">SURVIJAY FOUNDATION</p>
             <h1 className="hero-title">
-              Helping people build safer, stronger futures.
+              Together, We Can Build Stronger Communities.
             </h1>
             <p className="hero-text">
-              SurVijay Foundation partners with families, volunteers, and local
-              leaders to create practical programs that improve learning,
-              wellbeing, and opportunity.
+              Survijay Foundation is a social welfare organisation based in
+              Rampur, Uttar Pradesh, working toward community support and
+              meaningful social initiatives.
             </p>
             <div className="hero-actions">
-              <a className="btn-primary" href="/volunteer">
-                Become a volunteer
+              <a className="btn-primary" href="#our-work">
+                Explore Our Work
               </a>
-              <a className="btn-secondary" href="/programs">
-                Explore our work
+              <a className="btn-secondary" href="#get-involved">
+                Get Involved
               </a>
             </div>
           </div>
         </div>
-        <div className="hero-dots" aria-hidden="true">
-          {carouselImages.map((image, index) => (
-            <span
-              style={{ "--dot-index": index } as CSSProperties}
-              key={image.src}
-            />
-          ))}
-        </div>
       </section>
 
-      <section className="stats-band">
-        <div className="stats-grid">
-          {stats.map(([value, label]) => (
+      <section className="trust-strip" aria-label="Verified organisation facts">
+        <div className="trust-strip-grid">
+          {trustFacts.map(([label, value]) => (
             <div key={label}>
+              <span>{label}</span>
               <strong>{value}</strong>
-              <span className="text-sm text-white/78">{label}</span>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section">
-        <div className="section-heading">
-          <p className="eyebrow">Our focus</p>
-          <h2>Programs designed around real community needs.</h2>
-          <p>
-            Each initiative is simple to understand, easy to participate in,
-            and measured by visible outcomes.
-          </p>
-        </div>
-        <div className="grid gap-5 md:grid-cols-3">
-          {programs.map((program) => (
-            <article className="card" key={program.title}>
-              <div className="accent-bar" />
-              <h3>{program.title}</h3>
-              <p>{program.text}</p>
-              <a href={program.href}>Learn more</a>
-            </article>
-          ))}
+      <section className="section" id="about">
+        <div className="split-layout">
+          <div>
+            <p className="eyebrow">About Us</p>
+            <h2>About Survijay Foundation</h2>
+          </div>
+          <div className="stacked-copy">
+            <p>
+              Survijay Foundation is a registered organisation based in Rampur,
+              Uttar Pradesh. Incorporated in 2022, the foundation operates in
+              the area of social work and community welfare.
+            </p>
+            <p>
+              Our aim is to support meaningful social initiatives and contribute
+              toward stronger, more supported communities.
+            </p>
+            <dl className="info-list compact">
+              <div>
+                <dt>Founded</dt>
+                <dd>{foundationConfig.incorporationDate}</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>{foundationConfig.location}</dd>
+              </div>
+              <div>
+                <dt>CIN</dt>
+                <dd>{foundationConfig.cin}</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>{foundationConfig.status}</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </section>
 
       <section className="soft-band">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="eyebrow">Why trust us</p>
-            <h2>
-              Clear work, local leadership, transparent reporting.
-            </h2>
+        <div className="mx-auto max-w-7xl">
+          <div className="section-heading">
+            <p className="eyebrow">Our Purpose</p>
+            <h2>Guided by responsible community welfare.</h2>
+            <p>
+              The foundation&apos;s work is presented with clear, conservative
+              information while formal program records and activity details are
+              documented.
+            </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[  
-              "Program updates shared regularly",
-              "Offline donation details, no payment gateway for now",
-              "Volunteer-friendly activities and onboarding",
-              "Impact stories written in plain language",
-            ].map((item) => (
-              <div className="trust-item" key={item}>
-                <span aria-hidden="true">+</span>
-                <p>{item}</p>
-              </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {purposeContent.map((item) => (
+              <article className="card" key={item.title}>
+                <div className="accent-bar" />
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section route-band">
-        <div>
-          <p className="eyebrow">Complete site map</p>
-          <h2>Every key NGO page is ready to grow with real content.</h2>
+      <section className="section" id="our-work">
+        <div className="section-heading">
+          <p className="eyebrow">Our Focus Areas</p>
+          <h2>Broad areas aligned with community welfare.</h2>
+          <p>
+            The following areas are intentionally broad until confirmed
+            Survijay Foundation programs and field records are provided.
+          </p>
         </div>
-        <div className="route-list">
-          {[
-            ["About", "/about"],
-            ["Programs", "/programs"],
-            ["Impact", "/impact"],
-            ["Stories", "/stories"],
-            ["Gallery", "/gallery"],
-            ["Get Involved", "/get-involved"],
-            ["Volunteer", "/volunteer"],
-            ["Donate", "/donate"],
-            ["Transparency", "/transparency"],
-            ["Contact", "/contact"],
-          ].map(([label, href]) => (
-            <a href={href} key={href}>
-              {label}
-            </a>
+        <div className="grid gap-5 md:grid-cols-3">
+          {focusAreas.map((area) => (
+            <article className="card" key={area.title}>
+              <div className="accent-bar" />
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="section grid gap-10 lg:grid-cols-2 lg:items-center">
-        <div>
-          <p className="eyebrow">Featured story</p>
-          <h2>Small support can change the rhythm of a family.</h2>
+      <section className="section pt-0">
+        <div className="section-heading">
+          <p className="eyebrow">Our Work</p>
+          <h2>Verified initiatives will be documented with care.</h2>
           <p>
-            When children receive steady learning help and parents know where to
-            find health support, confidence grows at home. Our stories page
-            highlights these small, practical changes.
+            Program updates will include confirmed activity details, locations,
+            dates, and photographs as official records become available.
           </p>
         </div>
-        <div className="quote-panel">
+        <div className="grid gap-5 md:grid-cols-3">
+          {workAreas.map((work) => (
+            <article className="card" key={work.title}>
+              <h3>{work.title}</h3>
+              <p>{work.description}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" id="gallery">
+        <div className="section-heading">
+          <p className="eyebrow">Moments From Our Work</p>
+          <h2>Community welfare in focus.</h2>
           <p>
-            "The classes helped my daughter read with confidence, and the
-            volunteer team guided us with patience."
+            Verified field photographs can be published here with captions,
+            dates, and locations as they are shared by the foundation.
           </p>
-          <span>Parent from a community learning group</span>
+        </div>
+        <div className="gallery-grid feature-gallery">
+          {foundationImages.gallery.map((image) => (
+            <article className="gallery-tile" key={image.caption}>
+              <img src={image.src} alt={image.alt} loading="lazy" />
+              <h3>{image.caption}</h3>
+              {image.location && <p>{image.location}</p>}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="soft-band" id="get-involved">
+        <div className="mx-auto max-w-7xl">
+          <div className="section-heading">
+            <p className="eyebrow">Get Involved</p>
+            <h2>Be Part of the Change</h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
+            {getInvolvedOptions.map((item) => (
+              <article className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <a className="btn-primary mt-6" href="/contact">
+            Get Involved
+          </a>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">Our Leadership</p>
+          <h2>Directors</h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-2">
+          {foundationConfig.directors.map((director) => (
+            <article className="leader-card" key={director.name}>
+              <div className="leader-avatar" aria-hidden="true">
+                {director.name
+                  .split(" ")
+                  .slice(0, 2)
+                  .map((part) => part[0])
+                  .join("")}
+              </div>
+              <div>
+                <h3>{director.name}</h3>
+                <p>{director.role}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section pt-0">
+        <div className="wide-panel">
+          <p className="eyebrow">Organisation Information</p>
+          <h2>Verified public registration details</h2>
+          <dl className="info-list">
+            {organisationDetails.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </main>

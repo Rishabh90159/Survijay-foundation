@@ -1,44 +1,33 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Donate",
+  title: "Support Our Work",
   description:
-    "Support SurVijay Foundation through offline donation details. No payment gateway is connected in this static version.",
+    "Support information for Survijay Foundation. No online payment mechanism is connected.",
 };
 
 export default function DonatePage() {
   return (
     <main>
       <section className="page-hero page-hero-community">
-        <p className="eyebrow">Donate</p>
-        <h1>Support the work without online payment integration.</h1>
+        <p className="eyebrow">Support Our Work</p>
+        <h1>Support enquiries are handled through contact.</h1>
         <p>
-          This static version keeps donation instructions simple and offline.
-          Payment gateway integration can be added later.
+          This website does not collect donations or process payments. Verified
+          support details can be added once provided by Survijay Foundation.
         </p>
       </section>
-      <section className="section grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="card">
-          <h2>Donation details</h2>
-          <p>
-            Add verified bank account, UPI ID, QR code, and receipt contact
-            details here once the NGO confirms them.
-          </p>
-          <div className="detail-list">
-            <p><strong>Account name:</strong> SurVijay Foundation</p>
-            <p><strong>Bank:</strong> To be updated</p>
-            <p><strong>UPI:</strong> To be updated</p>
-            <p><strong>Receipt email:</strong> donations@survijay.org</p>
-          </div>
-        </div>
+      <section className="section">
         <div className="wide-panel">
-          <h2>What your support can do</h2>
-          <ul className="clean-list">
-            <li>Provide notebooks and learning materials for children.</li>
-            <li>Support transport and setup for community health sessions.</li>
-            <li>Help run skill-building workshops for women and youth.</li>
-            <li>Fund relief kits during urgent community needs.</li>
-          </ul>
+          <h2>No online payment is connected</h2>
+          <p>
+            Please do not send money through any unverified channel. For now,
+            use the contact page to enquire about volunteering, collaboration,
+            or support.
+          </p>
+          <a className="btn-primary mt-4" href="/contact">
+            Contact Us
+          </a>
         </div>
       </section>
     </main>

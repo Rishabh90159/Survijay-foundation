@@ -1,42 +1,69 @@
 import type { Metadata } from "next";
+import {
+  foundationConfig,
+  organisationDetails,
+  purposeContent,
+} from "../foundationData";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about SurVijay Foundation's mission, values, team approach, and community-first NGO model.",
+    "Learn about Survijay Foundation, a registered social welfare organisation based in Rampur, Uttar Pradesh.",
 };
 
 export default function AboutPage() {
   return (
     <main>
       <section className="page-hero page-hero-community">
-        <p className="eyebrow">About us</p>
-        <h1>Rooted in community. Built for practical change.</h1>
+        <p className="eyebrow">About Us</p>
+        <h1>About Survijay Foundation</h1>
         <p>
-          SurVijay Foundation exists to help children, women, and families
-          access support that is consistent, respectful, and easy to understand.
+          A registered organisation based in Rampur, Uttar Pradesh, operating
+          in the area of social work and community welfare.
         </p>
       </section>
-      <section className="section grid gap-8 lg:grid-cols-3">
-        {[
-          ["Mission", "Create community-led programs in education, health, and dignity."],
-          ["Vision", "A future where every family can access support before hardship becomes crisis."],
-          ["Values", "Transparency, respect, local leadership, and measurable action."],
-        ].map(([title, text]) => (
-          <article className="card" key={title}>
-            <h2>{title}</h2>
-            <p>{text}</p>
-          </article>
-        ))}
+      <section className="section">
+        <div className="split-layout">
+          <div>
+            <p className="eyebrow">Registered in 2022</p>
+            <h2>Rooted in community welfare.</h2>
+          </div>
+          <div className="stacked-copy">
+            <p>
+              Survijay Foundation was incorporated on{" "}
+              {foundationConfig.incorporationDate}. The foundation is listed as
+              an active non-government company under RoC Kanpur.
+            </p>
+            <p>
+              This website presents available public registration details and
+              avoids unsupported claims until official activity records,
+              photographs, and contact details are confirmed.
+            </p>
+          </div>
+        </div>
       </section>
-      <section className="section pt-0">
+      <section className="soft-band">
+        <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-3">
+          {purposeContent.map((item) => (
+            <article className="card" key={item.title}>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section">
         <div className="wide-panel">
-          <h2>How we work</h2>
-          <p>
-            We listen first, partner with local volunteers, run small but
-            regular activities, and report outcomes in simple language. This
-            keeps the work accountable and easy for supporters to follow.
-          </p>
+          <p className="eyebrow">Organisation Information</p>
+          <h2>Verified details</h2>
+          <dl className="info-list">
+            {organisationDetails.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </main>

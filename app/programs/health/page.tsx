@@ -1,38 +1,32 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Community Health Program",
+  title: "Health & Well-being",
   description:
-    "SurVijay Foundation community health program for hygiene awareness, nutrition guidance, referral support, and health camps.",
+    "A future focus-area page for verified Survijay Foundation health and well-being details.",
 };
 
 export default function HealthProgramPage() {
   return (
     <main>
       <section className="page-hero page-hero-health">
-        <p className="eyebrow">Program</p>
-        <h1>Community health awareness and support.</h1>
+        <p className="eyebrow">Focus Area</p>
+        <h1>Health &amp; Well-being</h1>
         <p>
-          This program helps families access practical health information,
-          hygiene guidance, and local referral support.
+          This page is reserved for verified activity details, locations, dates,
+          and photographs once provided by Survijay Foundation.
         </p>
       </section>
-      <section className="section grid gap-8 lg:grid-cols-2">
+      <section className="section">
         <div className="wide-panel">
-          <h2>Key activities</h2>
-          <ul className="clean-list">
-            <li>Health and hygiene awareness sessions.</li>
-            <li>Nutrition guidance for families and children.</li>
-            <li>Referral support through local healthcare networks.</li>
-          </ul>
-        </div>
-        <div className="card">
-          <h2>Expected outcomes</h2>
-          <ul className="clean-list">
-            <li>Improved awareness around preventable health issues.</li>
-            <li>More families connected to timely guidance.</li>
-            <li>Cleaner, safer community practices.</li>
-          </ul>
+          <h2>Details will be added after verification</h2>
+          <p>
+            For now, please see the Our Work page for broad community welfare
+            areas or contact the foundation for enquiries.
+          </p>
+          <a className="btn-primary mt-4" href="/programs">
+            View Our Work
+          </a>
         </div>
       </section>
     </main>

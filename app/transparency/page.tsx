@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import { organisationDetails } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "Transparency and Legal",
+  title: "Transparency",
   description:
-    "SurVijay Foundation transparency page for registration details, reports, policies, donation records, and legal documents.",
+    "Verified registration details and future transparency information for Survijay Foundation.",
 };
 
 export default function TransparencyPage() {
@@ -11,25 +12,25 @@ export default function TransparencyPage() {
     <main>
       <section className="page-hero page-hero-community">
         <p className="eyebrow">Transparency</p>
-        <h1>Trust grows when documents and updates are easy to find.</h1>
+        <h1>Trust begins with verified information.</h1>
         <p>
-          This page is prepared for NGO registration details, annual reports,
-          certificates, donation policies, and compliance updates.
+          This page presents available public registration details. Additional
+          reports or policy documents can be added when supplied by the
+          organisation.
         </p>
       </section>
-      <section className="section grid gap-5 md:grid-cols-2">
-        {[
-          ["Registration Details", "Registration number, date, governing body, and address can be added here."],
-          ["Tax Exemption", "80G, 12A, CSR, or FCRA information can be shown if applicable."],
-          ["Annual Reports", "Upload yearly PDF reports, audit summaries, and program highlights."],
-          ["Policies", "Privacy, refund, child safety, volunteer conduct, and donation receipt policies."],
-        ].map(([title, text]) => (
-          <article className="card" key={title}>
-            <div className="accent-bar" />
-            <h2>{title}</h2>
-            <p>{text}</p>
-          </article>
-        ))}
+      <section className="section">
+        <div className="wide-panel">
+          <h2>Organisation details</h2>
+          <dl className="info-list">
+            {organisationDetails.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </section>
     </main>
   );

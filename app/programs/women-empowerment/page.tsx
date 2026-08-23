@@ -1,38 +1,32 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Women Empowerment Program",
+  title: "Women & Family Support",
   description:
-    "SurVijay Foundation women empowerment program for skills, financial literacy, confidence-building, and community leadership.",
+    "A future focus-area page for verified Survijay Foundation women and family support details.",
 };
 
 export default function WomenEmpowermentProgramPage() {
   return (
     <main>
       <section className="page-hero page-hero-empowerment">
-        <p className="eyebrow">Program</p>
-        <h1>Women empowerment through skills and confidence.</h1>
+        <p className="eyebrow">Focus Area</p>
+        <h1>Women &amp; Family Support</h1>
         <p>
-          A program page for workshops, self-help groups, financial literacy,
-          and leadership activities for women and adolescent girls.
+          This page is reserved for verified activity details, locations, dates,
+          and photographs once provided by Survijay Foundation.
         </p>
       </section>
-      <section className="section grid gap-8 lg:grid-cols-2">
+      <section className="section">
         <div className="wide-panel">
-          <h2>Key activities</h2>
-          <ul className="clean-list">
-            <li>Skill-building sessions and peer learning groups.</li>
-            <li>Financial literacy and rights awareness workshops.</li>
-            <li>Confidence-building activities for young women.</li>
-          </ul>
-        </div>
-        <div className="card">
-          <h2>Expected outcomes</h2>
-          <ul className="clean-list">
-            <li>Greater confidence in daily decision-making.</li>
-            <li>Improved awareness of financial and social resources.</li>
-            <li>More participation in community leadership.</li>
-          </ul>
+          <h2>Details will be added after verification</h2>
+          <p>
+            For now, please see the Our Work page for broad community welfare
+            areas or contact the foundation for enquiries.
+          </p>
+          <a className="btn-primary mt-4" href="/programs">
+            View Our Work
+          </a>
         </div>
       </section>
     </main>

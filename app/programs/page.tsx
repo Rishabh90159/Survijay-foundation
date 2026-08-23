@@ -1,40 +1,47 @@
 import type { Metadata } from "next";
-
-const programs = [
-  ["Learning Support", "/programs/education", "Bridge classes, reading clubs, mentoring, and school-readiness support for children."],
-  ["Community Health", "/programs/health", "Awareness camps, hygiene education, nutrition guidance, and referral support."],
-  ["Women Empowerment", "/programs/women-empowerment", "Skill sessions, financial literacy, self-help circles, and confidence-building workshops."],
-  ["Relief and Essentials", "/programs/relief", "Food, clothing, learning materials, and emergency support during difficult periods."],
-  ["Youth Leadership", "/programs/youth-leadership", "Volunteer training, career guidance, digital literacy, and civic participation."],
-  ["Environment Drives", "/programs/environment", "Clean-up activities, tree plantation, and community awareness for safer public spaces."],
-];
+import { focusAreas, workAreas } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "Programs",
+  title: "Our Work",
   description:
-    "Explore SurVijay Foundation programs in education, health, women empowerment, relief, youth leadership, and environment.",
+    "Explore broad social welfare focus areas prepared for verified Survijay Foundation initiative details.",
 };
 
 export default function ProgramsPage() {
   return (
     <main>
       <section className="page-hero page-hero-community">
-        <p className="eyebrow">Our work</p>
-        <h1>Programs that turn support into visible outcomes.</h1>
+        <p className="eyebrow">Our Work</p>
+        <h1>Community welfare, presented with care.</h1>
         <p>
-          The site is structured so every program can become its own SEO page as
-          the NGO grows.
+          This page is prepared to showcase verified initiatives when activity
+          details, locations, dates, and photographs are provided.
         </p>
       </section>
-      <section className="section grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {programs.map(([title, href, text]) => (
-          <article className="card" key={title}>
-            <div className="accent-bar" />
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <a href={href}>View program</a>
-          </article>
-        ))}
+      <section className="section">
+        <div className="section-heading">
+          <p className="eyebrow">Focus Areas</p>
+          <h2>Broad areas aligned with social welfare.</h2>
+        </div>
+        <div className="grid gap-5 md:grid-cols-3">
+          {focusAreas.map((area) => (
+            <article className="card" key={area.title}>
+              <div className="accent-bar" />
+              <h2>{area.title}</h2>
+              <p>{area.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="section pt-0">
+        <div className="grid gap-5 md:grid-cols-3">
+          {workAreas.map((work) => (
+            <article className="card" key={work.title}>
+              <h2>{work.title}</h2>
+              <p>{work.description}</p>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );

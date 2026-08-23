@@ -1,38 +1,32 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Youth Leadership Program",
+  title: "Community Development",
   description:
-    "SurVijay Foundation youth leadership program for digital literacy, career guidance, volunteering, and civic participation.",
+    "A future focus-area page for verified Survijay Foundation community development details.",
 };
 
 export default function YouthLeadershipProgramPage() {
   return (
     <main>
       <section className="page-hero page-hero-empowerment">
-        <p className="eyebrow">Program</p>
-        <h1>Youth leadership for confident local changemakers.</h1>
+        <p className="eyebrow">Focus Area</p>
+        <h1>Community Development</h1>
         <p>
-          A page for volunteer training, digital literacy, career guidance, and
-          youth-led community activities.
+          This page is reserved for verified activity details, locations, dates,
+          and photographs once provided by Survijay Foundation.
         </p>
       </section>
-      <section className="section grid gap-8 lg:grid-cols-2">
+      <section className="section">
         <div className="wide-panel">
-          <h2>Key activities</h2>
-          <ul className="clean-list">
-            <li>Digital literacy and communication workshops.</li>
-            <li>Career guidance and mentoring sessions.</li>
-            <li>Youth volunteer teams for field activities.</li>
-          </ul>
-        </div>
-        <div className="card">
-          <h2>Expected outcomes</h2>
-          <ul className="clean-list">
-            <li>More youth prepared for study, work, and service.</li>
-            <li>Stronger local volunteer leadership.</li>
-            <li>Better confidence in communication and planning.</li>
-          </ul>
+          <h2>Details will be added after verification</h2>
+          <p>
+            For now, please see the Our Work page for broad community welfare
+            areas or contact the foundation for enquiries.
+          </p>
+          <a className="btn-primary mt-4" href="/programs">
+            View Our Work
+          </a>
         </div>
       </section>
     </main>

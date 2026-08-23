@@ -1,55 +1,38 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Education and Learning Support",
+  title: "Education Support",
   description:
-    "SurVijay Foundation education program for reading support, mentoring, homework help, and school-readiness activities.",
+    "A future focus-area page for verified Survijay Foundation education support details.",
 };
 
 export default function EducationProgramPage() {
+  return <FocusAreaPage title="Education Support" />;
+}
+
+function FocusAreaPage({ title }: { title: string }) {
   return (
     <main>
       <section className="page-hero page-hero-education">
-        <p className="eyebrow">Program</p>
-        <h1>Education and learning support for children.</h1>
+        <p className="eyebrow">Focus Area</p>
+        <h1>{title}</h1>
         <p>
-          A focused program page for reading clubs, bridge learning, mentoring,
-          school materials, and parent engagement.
+          This page is reserved for verified activity details, locations, dates,
+          and photographs once provided by Survijay Foundation.
         </p>
       </section>
-      <ProgramDetails
-        outcomes={["Better reading confidence", "Regular homework support", "School-readiness for younger children"]}
-        activities={["Weekly learning circles", "Volunteer mentoring", "Notebook and material distribution"]}
-      />
+      <section className="section">
+        <div className="wide-panel">
+          <h2>Details will be added after verification</h2>
+          <p>
+            For now, please see the Our Work page for broad community welfare
+            areas or contact the foundation for enquiries.
+          </p>
+          <a className="btn-primary mt-4" href="/programs">
+            View Our Work
+          </a>
+        </div>
+      </section>
     </main>
-  );
-}
-
-function ProgramDetails({
-  outcomes,
-  activities,
-}: {
-  outcomes: string[];
-  activities: string[];
-}) {
-  return (
-    <section className="section grid gap-8 lg:grid-cols-2">
-      <div className="wide-panel">
-        <h2>Key activities</h2>
-        <ul className="clean-list">
-          {activities.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="card">
-        <h2>Expected outcomes</h2>
-        <ul className="clean-list">
-          {outcomes.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </div>
-    </section>
   );
 }

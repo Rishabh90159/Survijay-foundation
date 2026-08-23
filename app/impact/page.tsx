@@ -1,35 +1,34 @@
 import type { Metadata } from "next";
+import { organisationDetails } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "Impact",
+  title: "Organisation Information",
   description:
-    "View SurVijay Foundation impact highlights, outcomes, reporting areas, and community progress.",
+    "Verified public registration information for Survijay Foundation.",
 };
 
 export default function ImpactPage() {
   return (
     <main>
       <section className="page-hero page-hero-community">
-        <p className="eyebrow">Impact</p>
-        <h1>Impact should be specific, visible, and easy to verify.</h1>
+        <p className="eyebrow">Organisation Information</p>
+        <h1>Verified details before impact claims.</h1>
         <p>
-          This page is prepared for numbers, annual reports, certificates,
-          testimonials, and before-after stories.
+          Impact figures, reports, and field stories can be added after
+          verified records are provided by the organisation.
         </p>
       </section>
       <section className="section">
-        <div className="impact-grid">
-          {[
-            ["4,800+", "People reached through education, awareness, and relief support."],
-            ["32", "Community drives completed with local volunteers."],
-            ["18", "Learning groups supported with regular sessions."],
-            ["120+", "Volunteers engaged across events and campaigns."],
-          ].map(([value, text]) => (
-            <article className="impact-card" key={value}>
-              <strong>{value}</strong>
-              <p>{text}</p>
-            </article>
-          ))}
+        <div className="wide-panel">
+          <h2>Public registration details</h2>
+          <dl className="info-list">
+            {organisationDetails.map(([label, value]) => (
+              <div key={label}>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
     </main>
