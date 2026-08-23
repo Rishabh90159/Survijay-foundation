@@ -263,6 +263,39 @@ export const initiatives = [
   },
 ];
 
+export const involvementImages = {
+  hero: "/images/banner-community.png",
+  intro: "/images/carousel-empowerment.png",
+  volunteer: "/images/carousel-education.png",
+  partner: "/images/banner-education.png",
+  support: "/images/banner-empowerment.png",
+  finalCta: "/images/community-hero.png",
+};
+
+export const involvementOptions = [
+  {
+    title: "Volunteer",
+    value: "Volunteer",
+    description:
+      "Contribute your time and skills to education, awareness and community-focused activities.",
+    cta: "Become a Volunteer",
+  },
+  {
+    title: "Partner With Us",
+    value: "Partner With Survijay Foundation",
+    description:
+      "Connect with us to explore opportunities for collaboration around education and community welfare.",
+    cta: "Explore Partnership",
+  },
+  {
+    title: "Support Our Work",
+    value: "Support an Initiative",
+    description:
+      "Help strengthen our initiatives through participation, resources, awareness or other forms of responsible support.",
+    cta: "Support an Initiative",
+  },
+];
+
 export const foundationImages = {
   hero: "/images/community-hero.png",
   about: "/images/banner-community.png",
