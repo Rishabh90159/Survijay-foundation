@@ -37,15 +37,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="sticky top-0 z-50 border-b border-[#d9e5e0] bg-white/94 backdrop-blur">
-          <nav className="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8">
+        <header className="site-header">
+          <div className="top-info-bar">
+            <div>
+              <p>Working for Education, Community Welfare & Social Support</p>
+              <span>
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.5A7.5 7.5 0 0 0 4.5 10c0 5.6 7.5 11.5 7.5 11.5S19.5 15.6 19.5 10A7.5 7.5 0 0 0 12 2.5Zm0 10.3A2.8 2.8 0 1 1 12 7.2a2.8 2.8 0 0 1 0 5.6Z" />
+                </svg>
+                {foundationConfig.location}
+              </span>
+            </div>
+          </div>
+          <nav className="main-navbar">
             <a className="brand" href="/" aria-label="Survijay Foundation home">
               <span>SV</span>
-              <strong>{foundationConfig.name}</strong>
+              <strong>
+                {foundationConfig.name}
+                <small>Together for Stronger Communities</small>
+              </strong>
             </a>
             <div className="hidden items-center gap-4 lg:flex">
               {navigationItems.map(([label, href]) => (
-                <a className="nav-link" href={href} key={href}>
+                <a
+                  className={href === "/" ? "nav-link nav-link-active" : "nav-link"}
+                  href={href}
+                  key={href}
+                >
                   {label}
                 </a>
               ))}
@@ -110,8 +128,8 @@ export default function RootLayout({
               </a>
               <p className="mt-4 max-w-md text-sm leading-7 text-white/72">
                 Survijay Foundation is a social welfare organisation based in
-                Rampur, Uttar Pradesh, working toward community support and
-                responsible social initiatives.
+                Rampur, Uttar Pradesh, working toward education, community
+                welfare and social support.
               </p>
             </div>
             <div className="footer-group">

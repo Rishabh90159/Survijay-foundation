@@ -43,19 +43,18 @@ export const navigationItems = [
 export const purposeContent = [
   {
     title: "Mission",
-    text: "To support meaningful social welfare initiatives and contribute toward stronger, more supported communities.",
+    text: "To support education, community welfare and meaningful social initiatives that contribute toward stronger and more supported communities.",
   },
   {
     title: "Vision",
-    text: "To encourage a society where people have greater access to support, opportunity and dignity.",
+    text: "To help create communities where people have access to learning, support, opportunity and dignity.",
   },
   {
     title: "Approach",
-    text: "To understand local needs, work responsibly and focus on initiatives that create practical value for communities.",
+    text: "To understand local needs, engage responsibly and focus on practical initiatives that create positive value.",
   },
 ];
 
-// Confirm actual Survijay Foundation programs before production.
 export const focusAreas = [
   {
     title: "Community Welfare",
@@ -77,30 +76,141 @@ export const focusAreas = [
 
 export const workAreas = [
   {
-    title: "Community Initiatives",
+    category: "Education",
+    title: "Education & Learning",
     description:
-      "Supporting activities designed around identified community needs.",
-    location: "",
-    date: "",
-    image: "",
+      "Supporting education-focused activities and encouraging opportunities for continued learning.",
+    image: "/images/banner-education.png",
   },
   {
-    title: "Social Outreach",
+    category: "Community",
+    title: "Community Support",
     description:
-      "Encouraging participation, awareness and stronger connections within communities.",
-    location: "",
-    date: "",
-    image: "",
+      "Contributing to welfare activities designed around local community needs.",
+    image: "/images/banner-community.png",
   },
   {
-    title: "Welfare Support",
+    category: "Awareness",
+    title: "Awareness & Outreach",
     description:
-      "Contributing to initiatives that support individuals, families and local communities.",
-    location: "",
-    date: "",
-    image: "",
+      "Encouraging participation, awareness and stronger community connections.",
+    image: "/images/banner-empowerment.png",
   },
 ];
+
+export const heroSlides = [
+  {
+    src: "/images/carousel-education.png",
+    alt: "Children studying in a learning environment",
+    desktopPosition: "center",
+    mobilePosition: "center",
+  },
+  {
+    src: "/images/banner-education.png",
+    alt: "Students reading and learning together",
+    desktopPosition: "center",
+    mobilePosition: "center",
+  },
+  {
+    src: "/images/community-hero.png",
+    alt: "Education support activity with children",
+    desktopPosition: "center",
+    mobilePosition: "center",
+  },
+  {
+    src: "/images/banner-community.png",
+    alt: "Community outreach and support activity",
+    desktopPosition: "center",
+    mobilePosition: "center",
+  },
+  {
+    src: "/images/carousel-empowerment.png",
+    alt: "Families and community participation",
+    desktopPosition: "center",
+    mobilePosition: "center",
+  },
+];
+
+export const aboutImages = [
+  {
+    src: "/images/banner-education.png",
+    alt: "Children and students in an education-focused setting",
+  },
+  {
+    src: "/images/banner-community.png",
+    alt: "Community support visual",
+  },
+  {
+    src: "/images/carousel-health.png",
+    alt: "People-focused social support visual",
+  },
+];
+
+export const educationFocusItems = [
+  "Learning Support",
+  "Educational Awareness",
+  "Continued Learning",
+];
+
+export const communityFocusItems = [
+  "Community Welfare",
+  "Family & Community Support",
+  "Social Awareness",
+  "Local Participation",
+];
+
+export const galleryImages = [
+  {
+    src: "/images/carousel-education.png",
+    alt: "Students learning together",
+    caption: "Education support",
+  },
+  {
+    src: "/images/banner-community.png",
+    alt: "Community engagement visual",
+    caption: "Community engagement",
+  },
+  {
+    src: "/images/banner-education.png",
+    alt: "Children reading and studying",
+    caption: "Learning environment",
+  },
+  {
+    src: "/images/carousel-empowerment.png",
+    alt: "Community participation visual",
+    caption: "Community participation",
+  },
+  {
+    src: "/images/banner-empowerment.png",
+    alt: "Social support visual",
+    caption: "Social support",
+  },
+  {
+    src: "/images/community-hero.png",
+    alt: "Education and community welfare visual",
+    caption: "Community welfare",
+  },
+  {
+    src: "/images/carousel-health.png",
+    alt: "People-focused support visual",
+    caption: "Welfare support",
+  },
+  {
+    src: "/images/banner-health.png",
+    alt: "Local support and awareness visual",
+    caption: "Awareness",
+  },
+];
+
+export const foundationImages = {
+  hero: "/images/community-hero.png",
+  about: "/images/banner-community.png",
+  gallery: galleryImages.slice(0, 3).map((image) => ({
+    ...image,
+    date: "",
+    location: "",
+  })),
+};
 
 export const getInvolvedOptions = [
   {
@@ -116,36 +226,6 @@ export const getInvolvedOptions = [
     text: "Get in touch to learn more about ways to support Survijay Foundation and its activities.",
   },
 ];
-
-export const foundationImages = {
-  // Replace with real Survijay Foundation activity photograph.
-  hero: "/images/community-hero.png",
-  about: "/images/banner-community.png",
-  // REPLACE WITH REAL SURVIJAY FOUNDATION PHOTOS.
-  gallery: [
-    {
-      src: "/images/banner-community.png",
-      alt: "Community welfare visual for Survijay Foundation website",
-      caption: "Community welfare",
-      date: "",
-      location: "",
-    },
-    {
-      src: "/images/banner-education.png",
-      alt: "Community support visual for Survijay Foundation website",
-      caption: "Social support",
-      date: "",
-      location: "",
-    },
-    {
-      src: "/images/banner-empowerment.png",
-      alt: "Community development visual for Survijay Foundation website",
-      caption: "Community development",
-      date: "",
-      location: "",
-    },
-  ],
-};
 
 export const organisationDetails = [
   ["Legal Name", foundationConfig.legalName],
