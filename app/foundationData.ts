@@ -15,7 +15,11 @@ export const foundationConfig = {
   address:
     "House No-17, Village Faizulla Nagar, Post Lamwa Kheda, Tehsil Tanda, Rampur, Uttar Pradesh - 244925",
   directors: [
-    { name: "Sachin Kumar Gautam", role: "Director", photo: "" },
+    {
+      name: "Sachin Kumar Gautam",
+      role: "Director",
+      photo: "/images/sachin-kumar-gautam-director.jpeg",
+    },
     { name: "Vijay Laxmi", role: "Director", photo: "" },
   ],
   phone: "+91 94580 24905",

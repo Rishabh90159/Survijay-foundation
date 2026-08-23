@@ -211,13 +211,22 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-2">
           {foundationConfig.directors.map((director) => (
             <article className="leader-card" key={director.name}>
-              <div className="leader-avatar" aria-hidden="true">
-                {director.name
-                  .split(" ")
-                  .slice(0, 2)
-                  .map((part) => part[0])
-                  .join("")}
-              </div>
+              {director.photo ? (
+                <img
+                  className="leader-photo"
+                  src={director.photo}
+                  alt={`${director.name}, ${director.role}`}
+                  loading="lazy"
+                />
+              ) : (
+                <div className="leader-avatar" aria-hidden="true">
+                  {director.name
+                    .split(" ")
+                    .slice(0, 2)
+                    .map((part) => part[0])
+                    .join("")}
+                </div>
+              )}
               <div>
                 <h3>{director.name}</h3>
                 <p>{director.role}</p>
