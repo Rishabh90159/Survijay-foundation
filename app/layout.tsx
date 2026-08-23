@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HeaderNavigation } from "./HeaderNavigation";
 import { foundationConfig, navigationItems } from "./foundationData";
 import "./globals.css";
 
@@ -57,17 +58,7 @@ export default function RootLayout({
                 <small>Together for Stronger Communities</small>
               </strong>
             </a>
-            <div className="hidden items-center gap-4 lg:flex">
-              {navigationItems.map(([label, href]) => (
-                <a
-                  className={href === "/" ? "nav-link nav-link-active" : "nav-link"}
-                  href={href}
-                  key={href}
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
+            <HeaderNavigation />
             <div className="nav-actions">
               <a className="header-cta desktop-cta" href="/get-involved">
                 Get Involved

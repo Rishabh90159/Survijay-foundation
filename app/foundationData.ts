@@ -202,6 +202,67 @@ export const galleryImages = [
   },
 ];
 
+// Replace representative imagery with verified Survijay Foundation activity photographs.
+export const workImages = {
+  hero: "/images/community-hero.png",
+  introduction: [
+    "/images/banner-education.png",
+    "/images/banner-community.png",
+    "/images/carousel-empowerment.png",
+  ],
+  education: [
+    "/images/carousel-education.png",
+    "/images/banner-education.png",
+    "/images/community-hero.png",
+  ],
+  community: [
+    "/images/banner-community.png",
+    "/images/carousel-empowerment.png",
+  ],
+  welfare: "/images/banner-empowerment.png",
+  storyBreak: "/images/carousel-health.png",
+  gallery: galleryImages,
+};
+
+export const initiatives = [
+  {
+    category: "Education",
+    title: "Education Support",
+    description:
+      "Encouraging learning opportunities, educational awareness and continued participation in education.",
+    image: "/images/carousel-education.png",
+    date: "",
+    location: "",
+  },
+  {
+    category: "Community",
+    title: "Social & Community Support",
+    description:
+      "Supporting stronger community connections and participation in local welfare initiatives.",
+    image: "/images/banner-community.png",
+    date: "",
+    location: "",
+  },
+  {
+    category: "Welfare",
+    title: "Community Welfare",
+    description:
+      "Focusing on practical local needs and responsible community engagement.",
+    image: "/images/banner-empowerment.png",
+    date: "",
+    location: "",
+  },
+  {
+    category: "Awareness",
+    title: "Awareness & Participation",
+    description:
+      "Encouraging awareness, communication and responsible participation.",
+    image: "/images/banner-health.png",
+    date: "",
+    location: "",
+  },
+];
+
 export const foundationImages = {
   hero: "/images/community-hero.png",
   about: "/images/banner-community.png",
