@@ -864,7 +864,7 @@ header .header-cta {
 }
 
 .floating-contact-button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.08);
   box-shadow: 0 18px 38px rgb(19 47 58 / 28%);
 }
 
@@ -877,6 +877,11 @@ header .header-cta {
   height: 1.45rem;
   width: 1.45rem;
   fill: currentColor;
+  transition: transform 180ms ease;
+}
+
+.floating-contact-button:hover svg {
+  transform: scale(1.08);
 }
 
 .floating-contact-button::after {
