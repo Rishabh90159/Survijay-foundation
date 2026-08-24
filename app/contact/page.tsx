@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import { foundationConfig } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Survijay Foundation",
   description:
-    "Contact Survijay Foundation to learn more about volunteering, collaboration, and supporting social welfare initiatives.",
+    "Contact Survijay Foundation in Rampur, Uttar Pradesh for volunteering, collaboration and social welfare enquiries.",
+  keywords: [
+    "Contact Survijay Foundation",
+    "Survijay Foundation phone",
+    "Survijay Foundation email",
+    "NGO contact Rampur Uttar Pradesh",
+  ],
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

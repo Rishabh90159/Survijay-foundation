@@ -6,11 +6,82 @@ import "./globals.css";
 const whatsappMessage =
   "Hello, I would like to know more about Survijay Foundation and its work.";
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  name: foundationConfig.name,
+  legalName: foundationConfig.legalName,
+  url: "https://survijay-foundation.vercel.app/",
+  logo: "https://survijay-foundation.vercel.app/favicon.svg",
+  email: foundationConfig.email,
+  telephone: foundationConfig.phone,
+  identifier: foundationConfig.cin,
+  foundingDate: "2022-07-06",
+  description:
+    "Survijay Foundation is a registered social welfare organisation based in Rampur, Uttar Pradesh, focused on education, community welfare, social support and awareness.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "House No-17, Village Faizulla Nagar, Post Lamwa Kheda, Tehsil Tanda",
+    addressLocality: foundationConfig.city,
+    addressRegion: foundationConfig.state,
+    postalCode: "244925",
+    addressCountry: "IN",
+  },
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: foundationConfig.location,
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: foundationConfig.phone,
+    email: foundationConfig.email,
+    contactType: "general enquiry",
+    areaServed: "IN",
+    availableLanguage: ["en", "hi"],
+  },
+  sameAs: [
+    foundationConfig.facebook,
+    foundationConfig.instagram,
+    foundationConfig.youtube,
+  ].filter(Boolean),
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://survijay-foundation.vercel.app"),
   title: "Survijay Foundation | Social Welfare Organisation in Rampur",
   description:
-    "Survijay Foundation is a social welfare organisation based in Rampur, Uttar Pradesh, focused on community welfare and responsible social initiatives.",
+    "Survijay Foundation is a registered social welfare organisation in Rampur, Uttar Pradesh, supporting education, community welfare, social support and awareness.",
+  applicationName: "Survijay Foundation",
+  authors: [{ name: "Survijay Foundation" }],
+  creator: "Survijay Foundation",
+  publisher: "Survijay Foundation",
+  category: "Social welfare organisation",
+  keywords: [
+    "Survijay Foundation",
+    "Survijay Foundation Rampur",
+    "SURVIJAY FOUNDATION",
+    "NGO in Rampur Uttar Pradesh",
+    "social welfare organisation Rampur",
+    "education support Rampur",
+    "community welfare Rampur",
+    "social support Uttar Pradesh",
+    "CIN U85320UP2022NPL167131",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
@@ -18,14 +89,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Survijay Foundation",
     description:
-      "Working toward stronger and more supported communities in Rampur, Uttar Pradesh.",
+      "Registered social welfare organisation in Rampur, Uttar Pradesh, working toward education, community welfare and social support.",
+    url: "/",
+    siteName: "Survijay Foundation",
     images: ["/og.png"],
+    locale: "en_IN",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Survijay Foundation",
     description:
-      "Working toward stronger and more supported communities in Rampur, Uttar Pradesh.",
+      "Registered social welfare organisation in Rampur, Uttar Pradesh, focused on education, community welfare and social support.",
     images: ["/og.png"],
   },
 };
@@ -38,6 +113,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <header className="site-header">
           <div className="top-info-bar">
             <div>

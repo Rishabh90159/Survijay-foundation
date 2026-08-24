@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import { workImages } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "Our Work",
+  title: "Our Work | Education and Community Welfare",
   description:
-    "Explore Survijay Foundation's work in education support, community welfare, social support, and awareness.",
+    "Explore Survijay Foundation's focus on education support, community welfare, social support and awareness in Rampur, Uttar Pradesh.",
+  keywords: [
+    "Survijay Foundation work",
+    "education support Rampur",
+    "community welfare Rampur",
+    "social support NGO Uttar Pradesh",
+  ],
+  alternates: {
+    canonical: "/programs",
+  },
 };
 
 const educationPoints = [

@@ -7,9 +7,18 @@ import {
 } from "../foundationData";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About Survijay Foundation",
   description:
-    "Learn about Survijay Foundation, a registered social welfare organisation based in Rampur, Uttar Pradesh.",
+    "Learn about Survijay Foundation, a registered social welfare organisation in Rampur, Uttar Pradesh, focused on education, community welfare and social support.",
+  keywords: [
+    "About Survijay Foundation",
+    "Survijay Foundation Rampur",
+    "registered NGO Rampur",
+    "social welfare organisation Uttar Pradesh",
+  ],
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const highlights = [

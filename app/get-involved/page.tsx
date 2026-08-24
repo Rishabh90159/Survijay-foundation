@@ -2,9 +2,18 @@ import type { Metadata } from "next";
 import { GetInvolvedPageClient } from "./GetInvolvedPageClient";
 
 export const metadata: Metadata = {
-  title: "Get Involved",
+  title: "Get Involved With Survijay Foundation",
   description:
-    "Get involved with Survijay Foundation through volunteering, collaboration, responsible support, or general enquiries.",
+    "Volunteer, collaborate or connect with Survijay Foundation to support education, community welfare and social participation in Rampur.",
+  keywords: [
+    "volunteer Survijay Foundation",
+    "get involved NGO Rampur",
+    "support education NGO Rampur",
+    "community welfare volunteer Uttar Pradesh",
+  ],
+  alternates: {
+    canonical: "/get-involved",
+  },
 };
 
 export default function GetInvolvedPage() {
